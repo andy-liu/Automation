@@ -1,0 +1,51 @@
+package com.zerozero.common;
+
+import java.io.File;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import io.appium.java_client.android.AndroidDriver;
+
+public class MyUtil {
+	
+	public MyUtil() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public static void setCapabilityForFirstInstall(DesiredCapabilities capabilities){
+		File classpathRoot = new File(System.getProperty("user.dir"));
+        File appDir = new File(classpathRoot, "apps");
+        File app = new File(appDir, "app-release.apk");
+        capabilities.setCapability("deviceName","7b72de8b");
+        capabilities.setCapability("platformVersion", "5.1.1");
+        capabilities.setCapability("app", app.getAbsolutePath());
+        capabilities.setCapability("appPackage", "com.zerozero.hover");
+//        capabilities.setCapability("autoAcceptAlerts", true);
+        capabilities.setCapability("appActivity", ".HomeActivity");
+//        capabilities.setCapability("appWaitActivity", "/.permission.ui.GrantPermissionsActivity");
+        capabilities.setCapability("appWaitActivity", "com.zerozero.hover.TermsActivity");
+	}
+	
+	public static void setCapabilityForNonFirstInstall(DesiredCapabilities capabilities){
+        capabilities.setCapability("deviceName","7b72de8b");
+        capabilities.setCapability("platformVersion", "5.1.1");
+        capabilities.setCapability("appPackage", "com.zerozero.hover");
+//        capabilities.setCapability("autoAcceptAlerts", true);
+        capabilities.setCapability("appActivity", ".HomeActivity");
+	}
+	
+	public static  boolean isElementExist(AndroidDriver<WebElement> driver, String Id){
+		try {
+			driver.findElement(By.id(Id));
+			return true;
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			return false;
+		}
+	}
+
+	
+}

@@ -1,0 +1,45 @@
+package com.lgp.demo_test;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class hover_selenium {
+
+	@Before
+	public void tearup(){
+
+		System.out.println("tearup!");
+	}
+
+	
+	@Test
+	public void test() throws InterruptedException {
+//		System.setProperty("webdriver.chrome.driver", "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();	
+		HomePage homepage = new HomePage();
+		homepage.navigate(driver);
+//		homepage.login(driver);
+		WebElement Account_link = driver.findElement(By.cssSelector("#wrapper > div.header > div.pc-header.clear__float.bg--write > ul > li.account > a"));
+//		Actions actions = new Actions(driver);
+		Account_link.click();
+		Thread.sleep(2000);
+		actions.moveToElement(Account_link);
+		WebElement Signin_link = driver.findElement(By.cssSelector("#wrapper > div.header > div.pc-header.clear__float.bg--write > ul > li:nth-child(2) > div > ul > li:nth-child(1) > a"));
+		Signin_link.click();
+		driver.quit();
+	}
+
+	@After
+	public void teardown(){
+		System.out.println("teardown!");
+	}
+
+}

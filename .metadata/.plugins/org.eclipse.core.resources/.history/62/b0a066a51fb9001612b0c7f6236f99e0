@@ -1,0 +1,62 @@
+package com.zerozero.page_object;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import io.appium.java_client.android.AndroidDriver;
+
+public class AlbumPage {
+	public AlbumPage() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public String dateInfo_Id = "com.zerozero.hover:id/header_text";
+	public String imgThumb_Id= "com.zerozero.hover:id/image_thumb";
+	public String imgViewBackBtn = "com.zerozero.hover:id/btn_album_back";
+	public String cancelSlectedBtn_Id = "com.zerozero.hover:id/btn_album_cancel";
+	public String selectAllBtn_Id = "com.zerozero.hover:id/btn_album_select_all";
+	public String imagSelected_Id = "com.zerozero.hover:id/image_selected";
+	public String imgSelectionText_Id= "com.zerozero.hover:id/text_selection_info";
+	public String textView_class = "android.widget.TextView";
+	public String deleteBtn_Id = "com.zerozero.hover:id/btn_album_delete";
+	public String shareBtn_Id = "com.zerozero.hover:id/btn_album_share";
+	
+	public String alertMessage_Id= "android:id/message";
+	public String delConfirmBtn = "android:id/button1";
+	public String delConcelBtn = "android:id/button2";
+	
+	public void openOneImg(AndroidDriver<WebElement> driver) throws Exception{
+		List<WebElement> imgList = driver.findElements(By.id(imgThumb_Id));
+		imgList.get(0).click();
+	}
+	
+	public void openImgOneByOne(AndroidDriver<WebElement> driver) throws Exception{
+		List<WebElement> imgList = driver.findElements(By.id(imgThumb_Id));
+		
+		for(int i=0;i<imgList.size();i++){
+			imgList.get(i).click();
+			driver.findElement(By.id(imgViewBackBtn)).click();;
+		}
+		driver.navigate().back();
+	}
+	
+	public void delAllImg(AndroidDriver<WebElement> driver) throws Exception{
+		List<WebElement> imgList = driver.findElements(By.id(imgThumb_Id));
+		driver.tap(1, imgList.get(0), 1000);
+		driver.findElement(By.id(selectAllBtn_Id)).click();
+		driver.findElement(By.id(deleteBtn_Id)).click();
+		driver.findElement(By.id(delConfirmBtn)).click();
+	}
+	
+	public void delAllImgOneByOne(AndroidDriver<WebElement> driver) throws Exception{
+		List<WebElement> imgList = driver.findElements(By.id(imgThumb_Id));
+		imgList.get(0).click();
+		for (int i=0; i<imgList.size(); i++){
+			driver.findElement(By.id(deleteBtn_Id)).click();
+			driver.findElement(By.id(delConfirmBtn)).click();
+		}
+
+	}
+}

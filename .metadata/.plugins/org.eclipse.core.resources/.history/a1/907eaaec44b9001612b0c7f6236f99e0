@@ -1,0 +1,77 @@
+package com.zerozero.AndroidAppAutoTestCases;
+
+import static org.junit.Assert.*;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import com.sun.jna.platform.win32.SetupApi;
+import com.zerozero.common.MyUtil;
+
+import io.appium.java_client.android.AndroidDriver;
+
+public class TrySomething {
+	
+	private static AndroidDriver<WebElement> driver;
+	@BeforeClass
+	public static void SetUp(){
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+		MyUtil.setCapabilityForNonFirstInstall(capabilities);
+		
+        try {
+			driver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+//			driver.closeApp();
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+	}
+	
+//	@Before
+//	public void setUp(){
+//		driver.launchApp();
+//	}
+	
+//	@Test
+//	public void test01() {
+//		try {
+//			System.out.println("it is test01");
+//			Thread.sleep(2000);
+//		} catch (Exception e) {
+//			// TODO: handle exception
+//			e.printStackTrace();
+//		}
+//		
+//	}
+	
+	@Test
+	public void test02() {
+		try {
+			driver.findElement(By.id("android:id/switchWidget")).click();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		
+	}
+//	@After
+//	public void tearDown(){
+//		driver.closeApp();
+//		
+//	}
+	
+	@AfterClass
+	public static void TearDown(){
+		driver.quit();//end the session
+	}
+
+}

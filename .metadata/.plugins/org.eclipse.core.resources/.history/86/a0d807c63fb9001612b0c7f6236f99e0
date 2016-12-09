@@ -1,0 +1,56 @@
+package com.zerozero.AndroidAppAutoTestCases;
+
+import static org.junit.Assert.*;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import com.zerozero.common.MyUtil;
+
+import io.appium.java_client.android.AndroidDriver;
+
+public class TrySomething {
+	
+	private static AndroidDriver<WebElement> driver;
+	@BeforeClass
+	public static void setUp(){
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+		MyUtil.setCapabilityForNonFirstInstall(capabilities);
+		
+        try {
+			driver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+	}
+	
+	@Test
+	public void test() {
+
+		try {
+			driver.closeApp();
+			driver.launchApp();
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		
+	}
+	
+	@AfterClass
+	public static void tearDown(){
+		driver.quit();
+	}
+
+}

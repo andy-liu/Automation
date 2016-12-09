@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.openqa.selenium.chrome.ChromeDriver"/>
+<fullyQualifiedTypeName name="com.lgp.demo_test.login"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.By.ByCssSelector"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.interactions.Actions"/>
+<fullyQualifiedTypeName name="io.appium.java_client.AppiumDriver"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
+<fullyQualifiedTypeName name="com.gargoylesoftware.htmlunit.javascript.host.media.webkitAudioContext"/>
+<fullyQualifiedTypeName name="junit.framework.Assert"/>
+<fullyQualifiedTypeName name="org.junit.Assert"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.sql.Time"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="com.zerozero.AndroidAppAuto.common.SetCapability"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.StaticApplicationContext"/>
+<fullyQualifiedTypeName name="org.omg.CORBA.PUBLIC_MEMBER"/>
+<fullyQualifiedTypeName name="com.zerozero.page_object.ImageViewPage"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="com.zerozero.common.MyUtil"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+<fullyQualifiedTypeName name="org.junit.BeforeClass"/>
+<fullyQualifiedTypeName name="org.junit.Before"/>
+<fullyQualifiedTypeName name="org.junit.AfterClass"/>
+<fullyQualifiedTypeName name="org.junit.After"/>
+<fullyQualifiedTypeName name="com.sun.jna.platform.win32.SetupApi"/>
+<fullyQualifiedTypeName name="io.appium.java_client.android.AndroidDriver"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
+<fullyQualifiedTypeName name="java.sql.Driver"/>
+<fullyQualifiedTypeName name="com.zerozero.page_object.HomePage"/>
+<fullyQualifiedTypeName name="org.junit.Test"/>
+</qualifiedTypeNameHistroy>

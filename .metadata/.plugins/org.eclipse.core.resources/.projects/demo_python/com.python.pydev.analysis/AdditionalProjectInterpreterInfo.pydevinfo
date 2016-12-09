@@ -1,0 +1,17 @@
+-- VERSION_4
+-- START DISKCACHE_2
+D:\workspace\.metadata\.plugins\org.eclipse.core.resources\.projects\demo_python\com.python.pydev.analysis\v2_indexcache
+test.__init__|1477546137667229000|D:\workspace\demo_python\src\test\__init__.py
+test.helloworld|1477567068527904000|D:\workspace\demo_python\src\test\helloworld.py
+-- END DISKCACHE
+-- START DICTIONARY
+1
+1=test.helloworld
+-- END DICTIONARY
+-- START TREE 1
+1
+dri|1|driver!11@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

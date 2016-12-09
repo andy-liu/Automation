@@ -1,0 +1,73 @@
+package com.zerozero.AndroidAppAutoTestCases;
+
+import static org.junit.Assert.*;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.sql.Driver;
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import com.zerozero.common.MyUtil;
+import com.zerozero.page_object.HomePage;
+
+import io.appium.java_client.android.AndroidDriver;
+
+public class TestHomePage {
+static AndroidDriver<WebElement> driver;
+
+	@BeforeClass
+	public static void setUp(){
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+		MyUtil.setCapabilityForNonFirstInstall(capabilities);
+        try {
+			driver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+			driver.closeApp();
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	@Before
+	public void setup(){
+		driver.launchApp();
+	}
+	
+
+	@Test
+	public void testNavToTutorialPage() {
+		try {
+			HomePage homePage = new HomePage();
+			homePage.navToTutorialPage(driver);
+//			System.out.println(driver.currentActivity().contains("TutorialActivity"));
+			assertTrue("Fail to navgate to Tutorial page!", driver.currentActivity().contains("TutorialActivit"));
+			driver.navigate().back();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+	}
+	
+	@Test
+	public void test02(){
+		System.out.println("hello!");
+	}
+	
+	@After
+	public void teardown(){
+		driver.closeApp();
+	}
+	
+	@AfterClass
+	public static void tearDown(){
+		driver.quit();
+	}
+
+}

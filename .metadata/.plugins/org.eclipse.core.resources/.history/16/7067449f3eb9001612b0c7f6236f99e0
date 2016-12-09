@@ -1,0 +1,14 @@
+package com.zerozero.AndroidAppAutoTestCases;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class TrySomething {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

@@ -1,0 +1,39 @@
+package com.lgp.demo_test;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+
+public class HomePage {
+	
+	public HomePage() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public String Baseurl = "http://0s9fsl12p3.aws.test.gethover.com/";
+	public String Username = "liuguoping@zerozero.cn";
+	public String Password = "565483520";
+	
+	public String Account_css = "#wrapper > div.header > div.pc-header.clear__float.bg--write > ul > li.account > a";
+	public String Signin_css = "#wrapper > div.header > div.pc-header.clear__float.bg--write > ul > li:nth-child(2) > div > ul > li:nth-child(1) > a";
+	public String Myorders_css = "#wrapper > div.header > div.pc-header.clear__float.bg--write > ul > li:nth-child(2) > div > ul > li:nth-child(2) > a";
+	public String Emailinput_css = "#login--form > form > div.input--box.box--lg.valid.dirty.modified.touched > input";
+	
+	public void navigate(WebDriver driver){
+		driver.get(Baseurl);
+		driver.manage().window().maximize();
+	}
+	
+	public void login(WebDriver driver) throws InterruptedException{
+
+		WebElement Account_link = driver.findElement(By.cssSelector(Account_css));
+		Actions actions = new Actions(driver);
+		Thread.sleep(2000);
+		actions.moveToElement(Account_link);
+		WebElement Signin_link = driver.findElement(By.cssSelector(Signin_css));
+		Signin_link.click();
+	}
+	
+		
+}
