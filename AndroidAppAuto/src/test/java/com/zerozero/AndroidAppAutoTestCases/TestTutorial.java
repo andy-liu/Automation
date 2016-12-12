@@ -5,9 +5,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import org.junit.FixMethodOrder;
-import org.junit.runners.MethodSorters;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -37,7 +34,7 @@ public class TestTutorial {
 	
 	@Test
 	public void testCloseTermspage(){
-		System.out.println("testCase: close termspage!");
+		System.out.println("testCase: close terms page!");
 //		driver.findElement(By.id("com.android.packageinstaller:id/permission_allow_button")).click();
         try {
         	TermsPage termsPage = new TermsPage();
