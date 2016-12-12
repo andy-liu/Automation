@@ -36,10 +36,10 @@ public class TrySomething {
 		}	
 	}
 	
-//	@Before
-//	public void setUp(){
-//		driver.launchApp();
-//	}
+	@Before
+	public void setUp(){
+		driver.launchApp();
+	}
 	
 	@Test
 	public void test() {
@@ -53,7 +53,6 @@ public class TrySomething {
 		}
 		
 	}
-	
 //	@Test
 //	public void test02() {
 //		try {
@@ -66,11 +65,11 @@ public class TrySomething {
 //		}
 //		
 //	}
-//	@After
-//	public void tearDown(){
-//		driver.closeApp();
-//		
-//	}
+	@After
+	public void tearDown(){
+		driver.closeApp();
+
+	}
 	
 	@AfterClass
 	public static void TearDown(){

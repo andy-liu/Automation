@@ -1,5 +1,7 @@
 package com.zerozero.page_object;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -14,6 +16,7 @@ public class ImageViewPage {
 	public String videoMode_Id = "com.zerozero.hover:id/camera_more";
 	public String cameraShut_Id = "com.zerozero.hover:id/btn_camera_shutter";
 	public String imgPreview_Id = "com.zerozero.hover:id/img_pre_layout_bg";
+	public String imgPreviewLoading_Id = "com.zerozero.hover:id/take_picture_preview_loading";
 	public String switchToVideoBtn_Id = "com.zerozero.hover:id/btn_camera_to_video";
 	public String cameraTimer_Id ="com.zerozero.hover:id/btn_camera_timer";
 	public String captureTimer_Id = "com.zerozero.hover:id/image_capture_timer";
@@ -70,15 +73,20 @@ public class ImageViewPage {
 		driver.findElement(By.id(cameraShut_Id)).click();
 	}
 	
+	//闪光拍照
+	public void takePhotoWithFlash(AndroidDriver<WebElement> driver) throws Exception{
+		changeToPhotoMode(driver);
+		driver.findElement(By.id(cameraFlashBtn_Id)).click();
+		driver.findElement(By.id(cameraShut_Id)).click();
+	}
+	
 	public void previewPhotoAndBack(AndroidDriver<WebElement> driver) throws Exception{
+		Thread.sleep(10000);
 		WebElement imgPreview = driver.findElement(By.id(imgPreview_Id));
 		imgPreview.click();
-		Thread.sleep(2000);
+
 		WebElement backFromeImgPreBtn = driver.findElement(By.id(backFromeImgPreBtn_Id));
 		backFromeImgPreBtn.click();
-		//waiting for loading image view
-		Thread.sleep(3000);
-		//back to home page
 		driver.navigate().back();
 	}
 	

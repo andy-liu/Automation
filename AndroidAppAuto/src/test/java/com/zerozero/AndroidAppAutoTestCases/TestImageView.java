@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 import org.junit.After;
 import org.junit.Before;
@@ -13,6 +14,7 @@ import org.junit.runners.MethodSorters;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.springframework.ui.context.Theme;
 
 import io.appium.java_client.android.AndroidDriver;
 
@@ -67,13 +69,29 @@ public class TestImageView {
 			ImageViewPage imageViewPage = new ImageViewPage();
 			imageViewPage.takePhotoWithTimer(driver);
 			assertTrue("capture timer is missing!", MyUtil.isElementExist(driver, imageViewPage.captureTimer_Id));
-			Thread.sleep(13000);
+			imageViewPage.previewPhotoAndBack(driver);
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+	}
+	
+	@Test
+	public void testTakePhotoWithFlash(){
+		System.out.println("testCase: navigate to imageView, take photo with flash and preview photo!");
+		try {
+			HomePage homePage = new HomePage();
+			homePage.navToImageViewPage(driver);
+			ImageViewPage imageViewPage = new ImageViewPage();
+			imageViewPage.takePhotoWithFlash(driver);
 			imageViewPage.previewPhotoAndBack(driver);
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
 		}
 	}
+	
 	@Test
 	public void testChangeModeOfImgView(){
 		System.out.println("testCase: change mode between video and photo");
@@ -205,6 +223,23 @@ public class TestImageView {
 		}
 
 	}
+	
+	@Test
+	public void testWait(){
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		try {
+			HomePage homePage = new HomePage();
+			homePage.navToImageViewPage(driver);
+			ImageViewPage imageViewPage = new ImageViewPage();
+			driver.findElement(By.id(imageViewPage.cameraShut_Id)).click();
+			driver.findElement(By.id(imageViewPage.imgPreviewLoading_Id));
+			System.out.println("找到了！");
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+	}
+	
 	@After
 	public void tearDown(){
 		driver.quit();
