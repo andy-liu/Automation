@@ -1,0 +1,13 @@
+package com.zerozero.AndroidAppAutoTestCases;
+
+import org.junit.Test;
+
+
+public class TryFileIO {
+
+	@Test
+	public void test() {
+		
+	}
+
+}

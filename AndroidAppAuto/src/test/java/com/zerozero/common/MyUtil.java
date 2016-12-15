@@ -1,5 +1,6 @@
 package com.zerozero.common;
 
+
 import java.io.File;
 import java.util.List;
 
@@ -9,13 +10,13 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import io.appium.java_client.android.AndroidDriver;
 
-public class MyUtil {
+public final class MyUtil {
 	
 	public MyUtil() {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public static void setCapabilityForFirstInstall(DesiredCapabilities capabilities){
+	public static final void setCapabilityForFirstInstall(DesiredCapabilities capabilities){
 		File classpathRoot = new File(System.getProperty("user.dir"));
         File appDir = new File(classpathRoot, "apps");
         File app = new File(appDir, "HoverCamera.apk");
@@ -29,15 +30,15 @@ public class MyUtil {
         capabilities.setCapability("appWaitActivity", "com.zerozero.hover.TermsActivity");
 	}
 	
-	public static void setCapabilityForNonFirstInstall(DesiredCapabilities capabilities){
-        capabilities.setCapability("deviceName","7b72de8b");
-        capabilities.setCapability("platformVersion", "5.1.1");
+	public static final void setCapabilityForNonFirstInstall(DesiredCapabilities capabilities){
+        capabilities.setCapability("deviceName","a26632af");
+        capabilities.setCapability("platformVersion", "6.0.1");
         capabilities.setCapability("appPackage", "com.zerozero.hover");
 //        capabilities.setCapability("autoAcceptAlerts", true);
         capabilities.setCapability("appActivity", ".HomeActivity");
 	}
 	
-	public static  boolean isElementExist(AndroidDriver<WebElement> driver, String Id){
+	public static  final boolean isElementExist(AndroidDriver<WebElement> driver, String Id){
 		try {
 			driver.findElement(By.id(Id));
 			return true;
@@ -68,4 +69,5 @@ public class MyUtil {
 //		System.out.println(driver.findElements(By.className("android.widget.TextView")).get(2).getText());
 		}
 	}
+
 }

@@ -1,0 +1,29 @@
+package com.zerozero.AndroidAppAutoTestCases;
+
+import java.io.FileReader;
+import java.io.Reader;
+
+import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVRecord;
+import org.junit.Test;
+
+
+public class TryFileIO {
+
+	@Test
+	public void test() {
+		try {
+			Reader in = new FileReader("D:\\workspace\\AndroidAppAuto\\data\\testCSV.csv");
+			Iterable<CSVRecord> records = CSVFormat.EXCEL.parse(in);
+			for (CSVRecord record : records){
+				String username = record.get("username");
+				System.out.println(username);
+			}
+
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+	}
+
+}

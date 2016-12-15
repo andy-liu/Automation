@@ -214,7 +214,7 @@ public class TestImageView {
 				imageViewPage.changeToVideoMode(driver);
 				imageViewPage.changeToPhotoMode(driver);
 				imageViewPage.takePhoto(driver);
-				System.out.println("第"+i+"次切换！");
+				System.out.println("第"+i*4+"次切换！");
 			}
 			
 		} catch (Exception e) {

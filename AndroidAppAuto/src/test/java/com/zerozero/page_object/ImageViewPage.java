@@ -62,7 +62,7 @@ public class ImageViewPage {
 		changeToPhotoMode(driver);
 		WebElement cameraShot = driver.findElement(By.id(cameraShut_Id));
 		cameraShot.click();
-		Thread.sleep(8000);
+//		Thread.sleep(8000);
 	}
 	
 	//五秒倒计时拍照

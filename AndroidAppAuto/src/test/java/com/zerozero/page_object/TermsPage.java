@@ -25,15 +25,14 @@ public class TermsPage {
 	public void acceptTermsAndPassTutorial(AndroidDriver<WebElement> driver) throws InterruptedException{
 		WebElement acceptBtn = driver.findElement(By.id(acceptBtn_id));
 		acceptBtn.click();
-		int widht = driver.manage().window().getSize().width;
+		int width = driver.manage().window().getSize().width;
    	 	int height = driver.manage().window().getSize().height;
-   	 	for(int i=0; i<6; i++){
-   		 driver.swipe(widht*6/7, height/2, widht*1/7, height/2, 500);
+   	 	for(int i=0; i<5; i++){
+   		 driver.swipe(width*6/7, height/2, width*1/7, height/2, 500);
    		 Thread.sleep(2000);
    	 	}
    	 	WebElement Enjoy_btn = driver.findElement(By.id("com.zerozero.hover:id/enjoy"));
    	 	Enjoy_btn.click();
-		
 	}
 	
 }

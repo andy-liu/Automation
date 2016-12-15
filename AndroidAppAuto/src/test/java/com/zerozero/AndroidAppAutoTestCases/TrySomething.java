@@ -1,7 +1,5 @@
 package com.zerozero.AndroidAppAutoTestCases;
 
-import static org.junit.Assert.*;
-
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -10,11 +8,8 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
-
-import com.sun.jna.platform.win32.SetupApi;
 import com.zerozero.common.MyUtil;
 
 import io.appium.java_client.android.AndroidDriver;

@@ -1,0 +1,37 @@
+package com.zerozero.AndroidAppAutoTestCases;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.Reader;
+
+import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVParser;
+import org.apache.commons.csv.CSVRecord;
+import org.junit.Test;
+
+
+public class TryFileIO {
+
+	@Test
+	public void test() throws IOException {
+		Reader in = null;
+		CSVParser parser = null;
+		try {
+			in = new FileReader("D:\\workspace\\AndroidAppAuto\\data\\testCSV.csv");
+//			records = CSVFormat.EXCEL.withHeader().parse(in);
+			parser = new CSVParser(in, CSVFormat.EXCEL.withHeader());
+			for (CSVRecord record : parser){
+				System.out.println("username: "+record.get("username"));
+				System.out.println("password: "+ record.get("password"));
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}finally {
+			in.close();
+			parser.close();
+		}
+		
+	}
+
+}
