@@ -12,9 +12,9 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import com.zerozero.common.MyUtil;
-import com.zerozero.page_object.HomePage;
-import com.zerozero.page_object.TermsPage;
-import com.zerozero.page_object.TutorialPage;
+import com.zerozero.page.HomePage;
+import com.zerozero.page.TermsPage;
+import com.zerozero.page.TutorialPage;
 
 //@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class TestTutorial {

@@ -16,8 +16,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import com.zerozero.common.MyUtil;
-import com.zerozero.page_object.HomePage;
-import com.zerozero.page_object.TutorialPage;
+import com.zerozero.page.HomePage;
+import com.zerozero.page.TutorialPage;
 
 import io.appium.java_client.android.AndroidDriver;
 

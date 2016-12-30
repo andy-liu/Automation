@@ -19,8 +19,8 @@ import org.springframework.ui.context.Theme;
 import io.appium.java_client.android.AndroidDriver;
 
 import com.zerozero.common.MyUtil;
-import com.zerozero.page_object.HomePage;
-import com.zerozero.page_object.ImageViewPage;
+import com.zerozero.page.HomePage;
+import com.zerozero.page.ImageViewPage;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 

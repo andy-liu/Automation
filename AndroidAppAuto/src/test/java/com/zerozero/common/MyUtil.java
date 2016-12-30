@@ -31,8 +31,8 @@ public final class MyUtil {
 	}
 	
 	public static final void setCapabilityForNonFirstInstall(DesiredCapabilities capabilities){
-        capabilities.setCapability("deviceName","a26632af");
-        capabilities.setCapability("platformVersion", "6.0.1");
+        capabilities.setCapability("deviceName","WTKDU16712010606");
+        capabilities.setCapability("platformVersion", "6.0");
         capabilities.setCapability("appPackage", "com.zerozero.hover");
 //        capabilities.setCapability("autoAcceptAlerts", true);
         capabilities.setCapability("appActivity", ".HomeActivity");

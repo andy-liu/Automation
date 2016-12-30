@@ -19,8 +19,8 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 
 import com.zerozero.common.MyUtil;
-import com.zerozero.page_object.AlbumPage;
-import com.zerozero.page_object.HomePage;
+import com.zerozero.page.AlbumPage;
+import com.zerozero.page.HomePage;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 
