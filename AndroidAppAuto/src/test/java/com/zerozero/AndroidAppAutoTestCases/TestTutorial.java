@@ -69,7 +69,7 @@ public class TestTutorial {
 			termsPage.acceptTermsAndPassTutorial(driver);
 			boolean resultOfPassTutorial = MyUtil.isElementExist(driver, homePage.albumViewBtn_Id);
 			assertTrue("Fail to pass tutorial", resultOfPassTutorial);
-		} catch (InterruptedException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

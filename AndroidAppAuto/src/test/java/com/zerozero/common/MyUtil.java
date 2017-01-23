@@ -31,16 +31,16 @@ public final class MyUtil {
 	}
 	
 	public static final void setCapabilityForNonFirstInstall(DesiredCapabilities capabilities){
-        capabilities.setCapability("deviceName","WTKDU16712010606");
-        capabilities.setCapability("platformVersion", "6.0");
+        capabilities.setCapability("deviceName","7b72de8b");
+        capabilities.setCapability("platformVersion", "5.1.1");
         capabilities.setCapability("appPackage", "com.zerozero.hover");
 //        capabilities.setCapability("autoAcceptAlerts", true);
         capabilities.setCapability("appActivity", ".HomeActivity");
 	}
 	
-	public static  final boolean isElementExist(AndroidDriver<WebElement> driver, String Id){
+	public static  final boolean isElementExist(AndroidDriver<WebElement> driver, String id){
 		try {
-			driver.findElement(By.id(Id));
+			driver.findElement(By.id(id));
 			return true;
 			
 		} catch (Exception e) {
@@ -49,25 +49,42 @@ public final class MyUtil {
 		}
 	}
 
-	public static void connectToCamera(AndroidDriver<WebElement> driver) throws Exception{
-		if(driver.findElements(By.className("android.widget.TextView")).get(2).getText().equals("Disconnected from Hover Camera.")){
-			driver.findElement(By.id("com.zerozero.hover:id/home_wifi")).click();
-			List<WebElement> wifiList = driver.findElements(By.className("android.widget.LinearLayout"));
-			System.out.println(wifiList);
-			for (int i=0; i<wifiList.size(); i++){
-//				if (wifiList.get(i).getText().equals("PleaseLetMeAlone")){
-//					System.out.println("111111111111111111111");
-//					wifiList.get(i).click();
-//					System.out.println("2222222222222222222");
-//					break;
-				System.out.println(wifiList.get(i).getText());
-				}
-//			driver.findElement(By.linkText("PleaseLetMeAlone")).click();
-//		else {
-//			System.out.println("it is connected!");
-//		}
-//		System.out.println(driver.findElements(By.className("android.widget.TextView")).get(2).getText());
+	public static  final boolean isElementExist(AndroidDriver<WebElement> driver, String className, String byClass){
+		try {
+			driver.findElement(By.className(className));
+			return true;
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			return false;
 		}
 	}
-
+	
+	public static void connectToCameraWifiIfNot(AndroidDriver<WebElement> driver) throws Exception{
+		WebElement connectStatus = driver.findElements(By.className("android.widget.TextView")).get(2);
+		if(connectStatus.getText().equals("Disconnected from Hover Camera.")){
+			driver.findElement(By.id("com.zerozero.hover:id/home_wifi")).click();
+//			int width = driver.manage().window().getSize().width;
+//	   	 	int height = driver.manage().window().getSize().height;
+//	   	 	System.out.println(height);
+//			driver.swipe(width/2, height*3/4, width/2, height/4, 50);
+			List<WebElement> wifiList = driver.findElements(By.id("android:id/title"));
+			for (WebElement wifi: wifiList){
+				if (wifi.getText().equals("Aisnumberone")){
+					System.out.println("HoverCamera wifi is found!");
+					wifi.click();
+					break;
+				}
+			}
+			driver.navigate().back();
+			for(int i=0; i<4; i++){
+				if(connectStatus.getText().equals("You are connected.")){
+					System.out.println("Success to connect to HoverCamera!");
+					break;
+				}
+				Thread.sleep(2000);
+			}
+		}	
+	}
 }
+

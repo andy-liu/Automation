@@ -36,30 +36,6 @@ public class TrySomething {
 		driver.launchApp();
 	}
 	
-	@Test
-	public void test() {
-		try {
-			System.out.println("it is test");
-			Thread.sleep(2000);
-			MyUtil.connectToCamera(driver);
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
-		}
-		
-	}
-//	@Test
-//	public void test02() {
-//		try {
-//			driver.findElement(By.id("com.zerozero.hover:id/home_wifi")).click();
-//			Thread.sleep(2000);
-//			driver.findElement(By.id("android:id/switchWidget")).click();
-//		} catch (Exception e) {
-//			// TODO: handle exception
-//			e.printStackTrace();
-//		}
-//		
-//	}
 	@After
 	public void tearDown(){
 		driver.closeApp();

@@ -45,6 +45,7 @@ public class TestImageView {
 		System.out.println("testCase: navigate to imageView, take photo and preview photo!");
 		try {
 			HomePage homePage = new HomePage();
+			MyUtil.connectToCameraWifiIfNot(driver);
 			//navigate to image view
 			homePage.navToImageViewPage(driver);
 			ImageViewPage imageViewPage = new ImageViewPage();
@@ -65,6 +66,7 @@ public class TestImageView {
 		System.out.println("testCase: navigate to imageView, take photo with timer and preview photo!");
 		try {
 			HomePage homePage = new HomePage();
+			MyUtil.connectToCameraWifiIfNot(driver);
 			homePage.navToImageViewPage(driver);
 			ImageViewPage imageViewPage = new ImageViewPage();
 			imageViewPage.takePhotoWithTimer(driver);
@@ -82,6 +84,7 @@ public class TestImageView {
 		System.out.println("testCase: navigate to imageView, take photo with flash and preview photo!");
 		try {
 			HomePage homePage = new HomePage();
+			MyUtil.connectToCameraWifiIfNot(driver);
 			homePage.navToImageViewPage(driver);
 			ImageViewPage imageViewPage = new ImageViewPage();
 			imageViewPage.takePhotoWithFlash(driver);
@@ -97,6 +100,7 @@ public class TestImageView {
 		System.out.println("testCase: change mode between video and photo");
 		try {
 			HomePage homePage = new HomePage();
+			MyUtil.connectToCameraWifiIfNot(driver);
 			//navigate to image view
 			homePage.navToImageViewPage(driver);
 			ImageViewPage imageViewPage = new ImageViewPage();
@@ -122,6 +126,7 @@ public class TestImageView {
 		System.out.println("testCase: Fly Land is not available when not flying");
 		try {
 			HomePage homePage = new HomePage();
+			MyUtil.connectToCameraWifiIfNot(driver);
 			//navigate to image view
 			homePage.navToImageViewPage(driver);
 			ImageViewPage imageViewPage = new ImageViewPage();
@@ -151,6 +156,7 @@ public class TestImageView {
 		System.out.println("testCase: video shot is not available when not flying");
 		try {
 			HomePage homePage = new HomePage();
+			MyUtil.connectToCameraWifiIfNot(driver);
 			//navigate to image view
 			homePage.navToImageViewPage(driver);
 			ImageViewPage imageViewPage = new ImageViewPage();
@@ -171,6 +177,7 @@ public class TestImageView {
 		System.out.println("testCase: track and yaw360 are not available when not flying");
 		try {
 			HomePage homePage = new HomePage();
+			MyUtil.connectToCameraWifiIfNot(driver);
 			//navigate to image view
 			homePage.navToImageViewPage(driver);
 			ImageViewPage imageViewPage = new ImageViewPage();
@@ -207,6 +214,7 @@ public class TestImageView {
 	public void testStress(){
 		try {
 			HomePage homePage = new HomePage();
+			MyUtil.connectToCameraWifiIfNot(driver);
 			//navigate to image view
 			homePage.navToImageViewPage(driver);
 			ImageViewPage imageViewPage = new ImageViewPage();

@@ -21,6 +21,17 @@ public class SettingsPage {
 	public String termsLink_id = "com.zerozero.hover:id/setting_about_conditions";
 	public String termsLinkText = "https://gethover.com/terms";
 	
+	//memory management page
+	public String formatMemoryBtn_id = "com.zerozero.hover:id/setting_memory_format_memory";
+	public String imageOfNotDownload_id = "com.zerozero.hover:id/shadow_bg";
+	public String imageOfDownloaded_id = "com.zerozero.hover:id/image_thumb";
+	public String formatAlertConfirm_id = "com.zerozero.hover:id/hint_confirm";
+	public String formatAlertCancel_id = "com.zerozero.hover:id/hint_cancel";
+	public String emptyStatus_id = "com.zerozero.hover:id/tvTextEmpty";
+	public String deleteBtn_id = "com.zerozero.hover:id/btn_album_delete";
+	public String deleteAlertCancel_id = "com.zerozero.hover:id/hint_cancel";
+	public String deleteAlertConfirm_id = "com.zerozero.hover:id/hint_confirm";
+	
 	//beast mode page
 	public String beastMode_id = "com.zerozero.hover:id/beast_mode_switch";
 	
@@ -29,7 +40,8 @@ public class SettingsPage {
 	public String autoVideoRecord_id = "com.zerozero.hover:id/video_setting_switch";
 	
 	//Water mark page
-	public String waterMark_id = "com.zerozero.hover:id/setting_switch_watermark_photo";
+	public String waterMarkPhoto_id = "com.zerozero.hover:id/setting_switch_watermark_photo";
+	public String waterMarkVideo_id = "com.zerozero.hover:id/setting_switch_watermark_video";
 	
 	//Wifi page
 	public String wifiNameInput_id = "com.zerozero.hover:id/setting_connection_camera_name";
@@ -50,6 +62,14 @@ public class SettingsPage {
 	public String wifiBandChangeCancel_id = "com.zerozero.hover:id/hint_cancel";
 	public String resultTextAfterChangeWifiBand_id= "com.zerozero.hover:id/hint_text";
 	public String resultTextAfterChangeWifiBand = "Hover Camera has switched Wi-Fi band, please reconnect.";
+	//factory reset page
+	public String factoryResetBtn_id = "com.zerozero.hover:id/setting_factory_reset_reset";
+	
+	//FeedBack
+	public String reportProblem_id = "com.zerozero.hover:id/setting_support_and_feedback_report_problem";
+	public String generalFeedBack_id = "com.zerozero.hover:id/setting_support_and_feedback_general_feedback";
+	public String sendLog_id = "com.zerozero.hover:id/setting_support_and_feedback_send_log";
+	public String cancelBtn_id = "com.zerozero.hover:id/setting_support_and_feedback_cancel";
 	
 	public void backToLastPage(AndroidDriver<WebElement> driver) throws Exception{
 		driver.findElement(By.className(backBtn_class)).click();
@@ -65,6 +85,13 @@ public class SettingsPage {
 	
 	public void navToMemoryManagePage(AndroidDriver<WebElement> driver) throws Exception{
 		driver.findElements(By.className(commonElement_class)).get(4).click();
+		Thread.sleep(1000);
+	}
+	
+	public void deleteResourceFromMemory(AndroidDriver<WebElement> driver) throws Exception{
+		driver.findElement(By.id(deleteBtn_id)).click();
+//		driver.findElement(By.id(deleteAlertConfirm_id));
+		driver.tap(1, driver.findElement(By.id(deleteAlertConfirm_id)), 500);
 	}
 	
 	public void navToBeastModePage(AndroidDriver<WebElement> driver) throws Exception{
@@ -113,13 +140,9 @@ public class SettingsPage {
 	}
 	
 	public void navToTutorialPage(AndroidDriver<WebElement> driver) throws Exception{
-		
-//		System.out.println(driver.findElements(By.className(commonElement_class)).size());
-//		driver.findElements(By.className(commonElement_class)).get(13).click();
-//		int width = driver.manage().window().getSize().width;
-//   	 	int height = driver.manage().window().getSize().height;
-//		driver.swipe(width/2, height/4, width/2, height*3/4, 1000);
-//		Thread.sleep(5000);
-		driver.findElement(By.id(faceBookLink_id)).click();
+		int width = driver.manage().window().getSize().width;
+   	 	int height = driver.manage().window().getSize().height;
+		driver.swipe(width/2, height*3/4, width/2, height/4, 500);
+		driver.findElements(By.className(commonElement_class)).get(9).click();
 	}
 }

@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.openqa.selenium.chrome.ChromeDriver"/>
-<fullyQualifiedTypeName name="com.lgp.demo_test.login"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.By.ByCssSelector"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.interactions.Actions"/>
 <fullyQualifiedTypeName name="io.appium.java_client.AppiumDriver"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
 <fullyQualifiedTypeName name="com.gargoylesoftware.htmlunit.javascript.host.media.webkitAudioContext"/>
 <fullyQualifiedTypeName name="junit.framework.Assert"/>
 <fullyQualifiedTypeName name="org.junit.Assert"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.sql.Time"/>
 <fullyQualifiedTypeName name="com.zerozero.AndroidAppAuto.common.SetCapability"/>
 <fullyQualifiedTypeName name="org.springframework.context.support.StaticApplicationContext"/>
@@ -20,7 +16,6 @@
 <fullyQualifiedTypeName name="java.sql.Driver"/>
 <fullyQualifiedTypeName name="com.zerozero.page_object.TutorialPage"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.By.ById"/>
-<fullyQualifiedTypeName name="com.zerozero.common.MyUtil"/>
 <fullyQualifiedTypeName name="java.io.Reader"/>
 <fullyQualifiedTypeName name="java.io.FileReader"/>
 <fullyQualifiedTypeName name="java.lang.Iterable"/>
@@ -47,13 +42,22 @@
 <fullyQualifiedTypeName name="com.zerozero.page_object.SettingsPage"/>
 <fullyQualifiedTypeName name="com.zerozero.AndroidAppAutoTestCases.TestTutorial"/>
 <fullyQualifiedTypeName name="java.awt.List"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="org.junit.Test"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
-<fullyQualifiedTypeName name="java.lang.Exception"/>
 <fullyQualifiedTypeName name="io.appium.java_client.android.AndroidKeyCode"/>
-<fullyQualifiedTypeName name="java.lang.Thread"/>
 <fullyQualifiedTypeName name="org.omg.CORBA.PUBLIC_MEMBER"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="com.zerozero.page.TutorialPage"/>
+<fullyQualifiedTypeName name="org.springframework.expression.spel.ast.BooleanLiteral"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="com.zerozero.page.HomePage"/>
+<fullyQualifiedTypeName name="com.zerozero.page.SettingsPage"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
+<fullyQualifiedTypeName name="com.zerozero.common.MyUtil"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="org.junit.Test"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="org.apache.http.client.HttpClient"/>
+<fullyQualifiedTypeName name="org.apache.http.impl.client.DefaultHttpClient"/>
+<fullyQualifiedTypeName name="org.apache.http.client.methods.HttpPost"/>
 </qualifiedTypeNameHistroy>

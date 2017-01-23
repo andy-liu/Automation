@@ -9,6 +9,7 @@ import io.appium.java_client.android.AndroidDriver;
 
 public class TutorialPage {
 	public String skipBtn_Id = "com.zerozero.hover:id/tutorial_skip_button";
+	public String enjoyBtn_id = "com.zerozero.hover:id/enjoy";
 	
 	public void skipTutorial(AndroidDriver<WebElement> driver) throws Exception{
 		TermsPage termsPage = new TermsPage();
