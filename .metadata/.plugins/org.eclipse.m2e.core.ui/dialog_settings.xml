@@ -57,6 +57,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\workspace"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -69,6 +70,8 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.zerozero.webautomation"/>
+			<item value="com.zerozero.webauto"/>
 			<item value="com.zerozero.AndroidAppAuto"/>
 			<item value="com.lgp.demo_test"/>
 			<item value="com.lgp.test"/>
@@ -78,6 +81,8 @@
 			<item value="com.lgp"/>
 		</list>
 		<list key="artifactId">
+			<item value="webautomation"/>
+			<item value="webauto"/>
 			<item value="AndroidAppAuto"/>
 			<item value="demo_test"/>
 			<item value="test"/>
