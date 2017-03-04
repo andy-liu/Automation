@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.openqa.selenium.interactions.Actions"/>
-<fullyQualifiedTypeName name="io.appium.java_client.AppiumDriver"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
-<fullyQualifiedTypeName name="com.gargoylesoftware.htmlunit.javascript.host.media.webkitAudioContext"/>
-<fullyQualifiedTypeName name="junit.framework.Assert"/>
-<fullyQualifiedTypeName name="org.junit.Assert"/>
-<fullyQualifiedTypeName name="java.sql.Time"/>
-<fullyQualifiedTypeName name="com.zerozero.AndroidAppAuto.common.SetCapability"/>
 <fullyQualifiedTypeName name="org.springframework.context.support.StaticApplicationContext"/>
 <fullyQualifiedTypeName name="com.zerozero.page_object.ImageViewPage"/>
-<fullyQualifiedTypeName name="org.junit.BeforeClass"/>
-<fullyQualifiedTypeName name="org.junit.AfterClass"/>
 <fullyQualifiedTypeName name="com.sun.jna.platform.win32.SetupApi"/>
 <fullyQualifiedTypeName name="java.sql.Driver"/>
 <fullyQualifiedTypeName name="com.zerozero.page_object.TutorialPage"/>
@@ -26,7 +16,6 @@
 <fullyQualifiedTypeName name="org.omg.CORBA.PRIVATE_MEMBER"/>
 <fullyQualifiedTypeName name="java.io.Writer"/>
 <fullyQualifiedTypeName name="java.io.FileWriter"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="org.apache.commons.csv.CSVPrinter"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="java.sql.Date"/>
@@ -46,18 +35,29 @@
 <fullyQualifiedTypeName name="org.omg.CORBA.PUBLIC_MEMBER"/>
 <fullyQualifiedTypeName name="com.zerozero.page.TutorialPage"/>
 <fullyQualifiedTypeName name="org.springframework.expression.spel.ast.BooleanLiteral"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
-<fullyQualifiedTypeName name="com.zerozero.page.HomePage"/>
 <fullyQualifiedTypeName name="com.zerozero.page.SettingsPage"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
 <fullyQualifiedTypeName name="com.zerozero.common.MyUtil"/>
-<fullyQualifiedTypeName name="java.lang.Exception"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.By"/>
-<fullyQualifiedTypeName name="java.lang.Thread"/>
-<fullyQualifiedTypeName name="org.junit.Test"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="org.apache.http.client.HttpClient"/>
 <fullyQualifiedTypeName name="org.apache.http.impl.client.DefaultHttpClient"/>
 <fullyQualifiedTypeName name="org.apache.http.client.methods.HttpPost"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="org.apache.http.NameValuePair"/>
+<fullyQualifiedTypeName name="org.apache.http.message.BasicNameValuePair"/>
+<fullyQualifiedTypeName name="org.apache.http.client.entity.UrlEncodedFormEntity"/>
+<fullyQualifiedTypeName name="org.apache.http.protocol.HTTP"/>
+<fullyQualifiedTypeName name="org.junit.Test"/>
+<fullyQualifiedTypeName name="com.zerozero.page.HomePage"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
+<fullyQualifiedTypeName name="org.junit.Assert"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="org.junit.BeforeClass"/>
+<fullyQualifiedTypeName name="org.junit.AfterClass"/>
+<fullyQualifiedTypeName name="com.zerozero.common.data"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.interactions.Actions"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
 </qualifiedTypeNameHistroy>
