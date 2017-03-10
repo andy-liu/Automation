@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 
 public class TermsPage {
 	public String text_classname = "android.widget.TextView";
+	public String Button_classname = "android.widget.Button";
 	public String acceptBtn_id ="com.zerozero.hover:id/button2";
 	public String closeBtn_id = "com.zerozero.hover:id/btnCloseTerms";
 	
@@ -23,7 +24,7 @@ public class TermsPage {
 	}
 	
 	public void acceptTermsAndPassTutorial(AndroidDriver<WebElement> driver) throws InterruptedException{
-		WebElement acceptBtn = driver.findElement(By.id(acceptBtn_id));
+		WebElement acceptBtn = driver.findElements(By.className(Button_classname)).get(0);
 		acceptBtn.click();
 		int width = driver.manage().window().getSize().width;
    	 	int height = driver.manage().window().getSize().height;

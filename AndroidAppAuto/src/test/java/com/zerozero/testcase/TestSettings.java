@@ -1,4 +1,4 @@
-package com.zerozero.androidappautotestcases;
+package com.zerozero.testcase;
 
 import static org.junit.Assert.*;
 

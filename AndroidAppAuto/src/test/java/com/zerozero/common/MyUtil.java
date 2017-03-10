@@ -16,7 +16,7 @@ public final class MyUtil {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public static final void setCapabilityForFirstInstall(DesiredCapabilities capabilities){
+	public static void setCapabilityForFirstInstall(DesiredCapabilities capabilities){
 		File classpathRoot = new File(System.getProperty("user.dir"));
         File appDir = new File(classpathRoot, "apps");
         File app = new File(appDir, "HoverCamera.apk");
@@ -27,18 +27,19 @@ public final class MyUtil {
 //        capabilities.setCapability("autoAcceptAlerts", true);
         capabilities.setCapability("appActivity", ".HomeActivity");
 //        capabilities.setCapability("appWaitActivity", "/.permission.ui.GrantPermissionsActivity");
-        capabilities.setCapability("appWaitActivity", "com.zerozero.hover.TermsActivity");
+        capabilities.setCapability("appWaitActivity", ".TermsActivity");
 	}
 	
-	public static final void setCapabilityForNonFirstInstall(DesiredCapabilities capabilities){
+	public static void setCapabilityForNonFirstInstall(DesiredCapabilities capabilities){
         capabilities.setCapability("deviceName","7b72de8b");
         capabilities.setCapability("platformVersion", "5.1.1");
         capabilities.setCapability("appPackage", "com.zerozero.hover");
 //        capabilities.setCapability("autoAcceptAlerts", true);
+        capabilities.setCapability("autoLaunch", false);
         capabilities.setCapability("appActivity", ".HomeActivity");
 	}
 	
-	public static  final boolean isElementExist(AndroidDriver<WebElement> driver, String id){
+	public static boolean isElementExist(AndroidDriver<WebElement> driver, String id){
 		try {
 			driver.findElement(By.id(id));
 			return true;
@@ -49,7 +50,7 @@ public final class MyUtil {
 		}
 	}
 
-	public static  final boolean isElementExist(AndroidDriver<WebElement> driver, String className, String byClass){
+	public static boolean isElementExist(AndroidDriver<WebElement> driver, String className, String byClass){
 		try {
 			driver.findElement(By.className(className));
 			return true;
@@ -70,7 +71,7 @@ public final class MyUtil {
 //			driver.swipe(width/2, height*3/4, width/2, height/4, 50);
 			List<WebElement> wifiList = driver.findElements(By.id("android:id/title"));
 			for (WebElement wifi: wifiList){
-				if (wifi.getText().equals("Aisnumberone")){
+				if (wifi.getText().equals("HoverCamera_499691")){
 					System.out.println("HoverCamera wifi is found!");
 					wifi.click();
 					break;

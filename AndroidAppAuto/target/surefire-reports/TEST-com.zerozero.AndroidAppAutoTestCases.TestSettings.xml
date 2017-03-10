@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="19" failures="2" name="com.zerozero.AndroidAppAutoTestCases.TestSettings" time="175.935" errors="0" skipped="0">
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.zerozero.androidappautotestcases.TestSettings" time="126.809" tests="19" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="D:\java\jdk\jre\bin"/>
@@ -22,14 +22,13 @@
     <property name="java.endorsed.dirs" value="D:\java\jdk\jre\lib\endorsed"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.io.tmpdir" value="C:\Windows\TEMP\"/>
-    <property name="line.separator" value="
-"/>
+    <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
     <property name="classworlds.conf" value="D:\apache-maven-3.3.9\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="GBK"/>
-    <property name="java.library.path" value="D:\java\jdk\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\java\jdk/bin;D:\java\jdk/bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\java\jdk\bin;D:\java\jdk\jre\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;D:\AndroidSDK\tools;D:\AndroidSDK\platform-tools;D:\apache-maven-3.3.9\bin;C:\Program Files (x86)\Appium;D:\mysoftware\ffmpeg-20161122-d316b21-win64-static\ffmpeg-20161122-d316b21-win64-static\bin;C:\Users\liuguoping\.gradle\wrapper\dists\gradle-2.14.1-all\8bnwg5hd3w55iofp58khbp6yv\gradle-2.14.1\bin;D:\mysoftware\curl-7.52.1;;."/>
+    <property name="java.library.path" value="D:\java\jdk\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\java\jdk/bin;D:\java\jdk/bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\java\jdk\bin;D:\java\jdk\jre\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;D:\AndroidSDK\tools;D:\AndroidSDK\platform-tools;D:\apache-maven-3.3.9\bin;C:\Program Files (x86)\Appium;D:\mysoftware\ffmpeg-20161122-d316b21-win64-static\ffmpeg-20161122-d316b21-win64-static\bin;C:\Users\liuguoping\.gradle\wrapper\dists\gradle-2.14.1-all\8bnwg5hd3w55iofp58khbp6yv\gradle-2.14.1\bin;D:\mysoftware\curl-7.52.1;D:\AndroidSDK\android-ndk-r10c;D:\AndroidSDK\cmake\3.6.3155560\bin;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -61,111 +60,23 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.zerozero.AndroidAppAutoTestCases.TestSettings" name="testSocialNetwork" time="5.585"/>
-  <testcase classname="com.zerozero.AndroidAppAutoTestCases.TestSettings" name="testDownloadPhotoFromMemory" time="20.069"/>
-  <testcase classname="com.zerozero.AndroidAppAutoTestCases.TestSettings" name="testFormatMemory" time="16.332"/>
-  <testcase classname="com.zerozero.AndroidAppAutoTestCases.TestSettings" name="testMemoryManagement" time="10.236"/>
-  <testcase classname="com.zerozero.AndroidAppAutoTestCases.TestSettings" name="testSwipe" time="6.544"/>
-  <testcase classname="com.zerozero.AndroidAppAutoTestCases.TestSettings" name="testBeastMode" time="3.011"/>
-  <testcase classname="com.zerozero.AndroidAppAutoTestCases.TestSettings" name="testFactoryReset" time="6.861"/>
-  <testcase classname="com.zerozero.AndroidAppAutoTestCases.TestSettings" name="testDefaultRecordVideoSettings" time="3.844"/>
-  <testcase classname="com.zerozero.AndroidAppAutoTestCases.TestSettings" name="testFirmwareUpdate" time="10.252"/>
-  <testcase classname="com.zerozero.AndroidAppAutoTestCases.TestSettings" name="testAboutPage" time="3.231"/>
-  <testcase classname="com.zerozero.AndroidAppAutoTestCases.TestSettings" name="testHelpCenter" time="3.243"/>
-  <testcase classname="com.zerozero.AndroidAppAutoTestCases.TestSettings" name="testWaterMark" time="16.035"/>
-  <testcase classname="com.zerozero.AndroidAppAutoTestCases.TestSettings" name="testFeedBack" time="4.023"/>
-  <testcase classname="com.zerozero.AndroidAppAutoTestCases.TestSettings" name="testJumpToTutorial" time="9.059"/>
-  <testcase classname="com.zerozero.AndroidAppAutoTestCases.TestSettings" name="testChangeWifiBand" time="6.083"/>
-  <testcase classname="com.zerozero.AndroidAppAutoTestCases.TestSettings" name="testChangeWifiInfo" time="6.434"/>
-  <testcase classname="com.zerozero.AndroidAppAutoTestCases.TestSettings" name="testDeleteVideoInMemory" time="14.768">
-    <failure message="Fail to delete video which is not downloaded!" type="java.lang.AssertionError">java.lang.AssertionError: Fail to delete video which is not downloaded!
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.assertTrue(Assert.java:41)
-	at com.zerozero.AndroidAppAutoTestCases.TestSettings.testDeleteVideoInMemory(TestSettings.java:223)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-</failure>
-    <system-out>testCase: test delete video in memory
-</system-out>
-    <system-err>一月 19, 2017 2:58:58 下午 org.openqa.selenium.remote.ProtocolHandshake createSession
-信息: Attempting bi-dialect session, assuming Postel&apos;s Law holds true on the remote end
-一月 19, 2017 2:59:00 下午 org.openqa.selenium.remote.ProtocolHandshake createSession
-信息: Detected dialect: OSS
-</system-err>
-  </testcase>
-  <testcase classname="com.zerozero.AndroidAppAutoTestCases.TestSettings" name="testDeletePhotoInMemory" time="14.385">
-    <failure message="Fail to delete photo which is not downloaded!" type="java.lang.AssertionError">java.lang.AssertionError: Fail to delete photo which is not downloaded!
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.assertTrue(Assert.java:41)
-	at com.zerozero.AndroidAppAutoTestCases.TestSettings.testDeletePhotoInMemory(TestSettings.java:176)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-</failure>
-    <system-out>testCase: test delete photo in memory
-</system-out>
-    <system-err>一月 19, 2017 2:59:12 下午 org.openqa.selenium.remote.ProtocolHandshake createSession
-信息: Attempting bi-dialect session, assuming Postel&apos;s Law holds true on the remote end
-一月 19, 2017 2:59:15 下午 org.openqa.selenium.remote.ProtocolHandshake createSession
-信息: Detected dialect: OSS
-</system-err>
-  </testcase>
-  <testcase classname="com.zerozero.AndroidAppAutoTestCases.TestSettings" name="testRecordVideoSettings" time="15.94"/>
+  <testcase name="testSocialNetwork" classname="com.zerozero.androidappautotestcases.TestSettings" time="5.662"/>
+  <testcase name="testDownloadPhotoFromMemory" classname="com.zerozero.androidappautotestcases.TestSettings" time="8.593"/>
+  <testcase name="testFormatMemory" classname="com.zerozero.androidappautotestcases.TestSettings" time="20.031"/>
+  <testcase name="testMemoryManagement" classname="com.zerozero.androidappautotestcases.TestSettings" time="10.056"/>
+  <testcase name="testSwipe" classname="com.zerozero.androidappautotestcases.TestSettings" time="3.012"/>
+  <testcase name="testBeastMode" classname="com.zerozero.androidappautotestcases.TestSettings" time="15.377"/>
+  <testcase name="testFactoryReset" classname="com.zerozero.androidappautotestcases.TestSettings" time="6.879"/>
+  <testcase name="testDefaultRecordVideoSettings" classname="com.zerozero.androidappautotestcases.TestSettings" time="3.317"/>
+  <testcase name="testFirmwareUpdate" classname="com.zerozero.androidappautotestcases.TestSettings" time="3.149"/>
+  <testcase name="testAboutPage" classname="com.zerozero.androidappautotestcases.TestSettings" time="3.086"/>
+  <testcase name="testHelpCenter" classname="com.zerozero.androidappautotestcases.TestSettings" time="3.256"/>
+  <testcase name="testWaterMark" classname="com.zerozero.androidappautotestcases.TestSettings" time="3.058"/>
+  <testcase name="testFeedBack" classname="com.zerozero.androidappautotestcases.TestSettings" time="3.107"/>
+  <testcase name="testJumpToTutorial" classname="com.zerozero.androidappautotestcases.TestSettings" time="3.104"/>
+  <testcase name="testChangeWifiBand" classname="com.zerozero.androidappautotestcases.TestSettings" time="6.127"/>
+  <testcase name="testChangeWifiInfo" classname="com.zerozero.androidappautotestcases.TestSettings" time="6.459"/>
+  <testcase name="testDeleteVideoInMemory" classname="com.zerozero.androidappautotestcases.TestSettings" time="9.626"/>
+  <testcase name="testDeletePhotoInMemory" classname="com.zerozero.androidappautotestcases.TestSettings" time="9.723"/>
+  <testcase name="testRecordVideoSettings" classname="com.zerozero.androidappautotestcases.TestSettings" time="3.184"/>
 </testsuite>

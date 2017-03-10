@@ -1,4 +1,4 @@
-package com.zerozero.androidappautotestcases;
+package com.zerozero.testcase;
 
 import static org.junit.Assert.*;
 
@@ -210,27 +210,25 @@ public class TestImageView {
 		}
 	}
 	
-	@Test
-	public void testStress(){
-		try {
-			HomePage homePage = new HomePage();
-			MyUtil.connectToCameraWifiIfNot(driver);
-			//navigate to image view
-			homePage.navToImageViewPage(driver);
-			ImageViewPage imageViewPage = new ImageViewPage();
-			for (int i=0; i<30; i++){
-				imageViewPage.changeToVideoMode(driver);
-				imageViewPage.changeToPhotoMode(driver);
-				imageViewPage.takePhoto(driver);
-				System.out.println("第"+i*4+"次切换！");
-			}
-			
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
-		}
-
-	}
+//	@Test
+//	public void testStress(){
+//		try {
+//			HomePage homePage = new HomePage();
+//			MyUtil.connectToCameraWifiIfNot(driver);
+//			//navigate to image view
+//			homePage.navToImageViewPage(driver);
+//			ImageViewPage imageViewPage = new ImageViewPage();
+//			for (int i=0; i<6000; i++){
+//				WebElement cameraShot = driver.findElement(By.id(imageViewPage.cameraShut_Id));
+//				cameraShot.click();
+//				System.out.println("第"+ i+ "次拍照");
+//			}
+//		} catch (Exception e) {
+//			// TODO: handle exception
+//			e.printStackTrace();
+//		}
+//
+//	}
 	
 	@Test
 	public void testWait(){

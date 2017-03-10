@@ -13,7 +13,7 @@ public class TutorialPage {
 	
 	public void skipTutorial(AndroidDriver<WebElement> driver) throws Exception{
 		TermsPage termsPage = new TermsPage();
-		WebElement acceptBtn = driver.findElement(By.id(termsPage.acceptBtn_id));
+		WebElement acceptBtn = driver.findElements(By.className(termsPage.Button_classname)).get(0);
 		acceptBtn.click();
 		int widht = driver.manage().window().getSize().width;
    	 	int height = driver.manage().window().getSize().height;

@@ -98,7 +98,6 @@ public class TestHomePage {
 			WebElement loginStatus = driver.findElement(By.cssSelector("#wrapper > div.header > div.pc-header.clear__float.bg--write > ul > li.account > div > ul > li:nth-child(1)"));
 			assertTrue("Login failed", loginStatus.getText().equals("Logout") || loginStatus.getText().equals("退出"));
 			System.out.println("success!----login");
-			
 			//logout
 			loginStatus.click();
 			MyUtil.OpenNewWindow(Data.baseURL_Test, driver);
@@ -114,13 +113,13 @@ public class TestHomePage {
 		}
 	}
 
-	@Test
-	public void tryNoCatch() throws InterruptedException{
+//	@Test
+//	public void tryNoCatch() throws InterruptedException{
 //		System.out.println("testCase: Do not catch exception");
 //		driver.findElement(By.cssSelector("test")).click();
-		MyUtil.OpenNewWindow(Data.baseURL_Test, driver);
-		Thread.sleep(5000);
-	}
+//		MyUtil.OpenNewWindow(Data.baseURL_Test, driver);
+//		Thread.sleep(5000);
+//	}
 	
 	@AfterClass
 	public static void teardown(){

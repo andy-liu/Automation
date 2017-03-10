@@ -1,4 +1,4 @@
-package com.zerozero.androidappautotestcases;
+package com.zerozero.testcase;
 
 import java.net.MalformedURLException;
 import java.net.URL;

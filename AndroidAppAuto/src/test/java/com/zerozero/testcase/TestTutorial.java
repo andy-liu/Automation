@@ -1,4 +1,4 @@
-package com.zerozero.androidappautotestcases;
+package com.zerozero.testcase;
 
 import io.appium.java_client.android.AndroidDriver;
 import org.junit.After;
@@ -21,7 +21,7 @@ public class TestTutorial {
 	private  AndroidDriver<WebElement> driver;
 
 	@Before
-	public  void setUp() {
+	public void setUp() {
         DesiredCapabilities capabilities = new DesiredCapabilities();
 		MyUtil.setCapabilityForFirstInstall(capabilities);
         try {

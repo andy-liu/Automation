@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="0" name="com.zerozero.AndroidAppAutoTestCases.TestHomePage" time="24.774" errors="0" skipped="0">
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.zerozero.androidappautotestcases.TestHomePage" time="28.845" tests="6" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="D:\java\jdk\jre\bin"/>
@@ -22,14 +22,13 @@
     <property name="java.endorsed.dirs" value="D:\java\jdk\jre\lib\endorsed"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.io.tmpdir" value="C:\Windows\TEMP\"/>
-    <property name="line.separator" value="
-"/>
+    <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
     <property name="classworlds.conf" value="D:\apache-maven-3.3.9\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="GBK"/>
-    <property name="java.library.path" value="D:\java\jdk\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\java\jdk/bin;D:\java\jdk/bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\java\jdk\bin;D:\java\jdk\jre\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;D:\AndroidSDK\tools;D:\AndroidSDK\platform-tools;D:\apache-maven-3.3.9\bin;C:\Program Files (x86)\Appium;D:\mysoftware\ffmpeg-20161122-d316b21-win64-static\ffmpeg-20161122-d316b21-win64-static\bin;C:\Users\liuguoping\.gradle\wrapper\dists\gradle-2.14.1-all\8bnwg5hd3w55iofp58khbp6yv\gradle-2.14.1\bin;D:\mysoftware\curl-7.52.1;;."/>
+    <property name="java.library.path" value="D:\java\jdk\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\java\jdk/bin;D:\java\jdk/bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\java\jdk\bin;D:\java\jdk\jre\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;D:\AndroidSDK\tools;D:\AndroidSDK\platform-tools;D:\apache-maven-3.3.9\bin;C:\Program Files (x86)\Appium;D:\mysoftware\ffmpeg-20161122-d316b21-win64-static\ffmpeg-20161122-d316b21-win64-static\bin;C:\Users\liuguoping\.gradle\wrapper\dists\gradle-2.14.1-all\8bnwg5hd3w55iofp58khbp6yv\gradle-2.14.1\bin;D:\mysoftware\curl-7.52.1;D:\AndroidSDK\android-ndk-r10c;D:\AndroidSDK\cmake\3.6.3155560\bin;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -61,10 +60,14 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.zerozero.AndroidAppAutoTestCases.TestHomePage" name="testNavToWifiPage" time="4.804"/>
-  <testcase classname="com.zerozero.AndroidAppAutoTestCases.TestHomePage" name="testNavToSettingsPage" time="4.913"/>
-  <testcase classname="com.zerozero.AndroidAppAutoTestCases.TestHomePage" name="testNavToTutorialPage" time="3.159"/>
-  <testcase classname="com.zerozero.AndroidAppAutoTestCases.TestHomePage" name="testNavoToAlbumPage" time="4.845"/>
-  <testcase classname="com.zerozero.AndroidAppAutoTestCases.TestHomePage" name="testElementsOfHomePage" time="4"/>
-  <testcase classname="com.zerozero.AndroidAppAutoTestCases.TestHomePage" name="testNavToImageViewPage" time="3.053"/>
+  <testcase name="testNavToWifiPage" classname="com.zerozero.androidappautotestcases.TestHomePage" time="4.523"/>
+  <testcase name="testNavToSettingsPage" classname="com.zerozero.androidappautotestcases.TestHomePage" time="3.174"/>
+  <testcase name="testNavToTutorialPage" classname="com.zerozero.androidappautotestcases.TestHomePage" time="5.677"/>
+  <testcase name="testNavoToAlbumPage" classname="com.zerozero.androidappautotestcases.TestHomePage" time="5.054"/>
+  <testcase name="testElementsOfHomePage" classname="com.zerozero.androidappautotestcases.TestHomePage" time="4.149">
+    <failure message="element is missing" type="java.lang.AssertionError">java.lang.AssertionError: element is missing
+	at com.zerozero.androidappautotestcases.TestHomePage.testElementsOfHomePage(TestHomePage.java:56)
+</failure>
+  </testcase>
+  <testcase name="testNavToImageViewPage" classname="com.zerozero.androidappautotestcases.TestHomePage" time="3.179"/>
 </testsuite>

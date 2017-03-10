@@ -11,7 +11,6 @@ public class HomePage {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public String productLink_css = "#wrapper > div.header > div.pc-header.clear__float.bg--write > ul > li.product";
 	public String account_css = "#wrapper > div.header > div.pc-header.clear__float.bg--write > ul > li.account";
 	public String signInOrSignUpLink_css = "#wrapper > div.header > div.pc-header.clear__float.bg--write > ul > li.account > div > ul > li:nth-child(1)";
 	public String myOrdersLink_css = "#wrapper > div.header > div.pc-header.clear__float.bg--write > ul > li.account > div > ul > li:nth-child(2)";
@@ -19,6 +18,10 @@ public class HomePage {
 	public String currentLocale_css = "#wrapper > div.header > div.pc-header.clear__float.bg--write > ul > li.lang";
 	public String firstLocaleOption_css = "#wrapper > div.header > div.pc-header.clear__float.bg--write > ul > li.lang > div > ul > li:nth-child(1)";
 	public String secondLocaleOption_css = "#wrapper > div.header > div.pc-header.clear__float.bg--write > ul > li.lang > div > ul > li:nth-child(2)";
+	
+	//region==US
+	public String storeLink_css = "#header > div.pc-header.clear__float.bg--write > ul > li.store";
+	public String cartLink_css = "#header > div.pc-header.clear__float > ul > li.cart";
 	
 	public void changeLocaleToUS(WebElement currentLocale, WebDriver driver) throws Exception{
 		MyUtil.MouseHoverByJavaScript(currentLocale, driver);
@@ -59,5 +62,10 @@ public class HomePage {
 	public void navToSignInPage(WebDriver driver) throws Exception{
 		MyUtil.MouseHoverByJavaScript(driver.findElement(By.cssSelector(account_css)), driver);
 		driver.findElement(By.cssSelector(signInOrSignUpLink_css)).click();
+	}
+	
+	public void navToProductPage(WebDriver driver) throws Exception{
+		driver.findElement(By.cssSelector(storeLink_css)).click();
+		Thread.sleep(10000);
 	}
 }

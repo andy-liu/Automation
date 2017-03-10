@@ -27,8 +27,8 @@ public class AlbumPage {
 	public String shareBtn_Id = "com.zerozero.hover:id/btn_album_share";
 	
 	public String alertMessage_Id= "android:id/message";
-	public String delConfirmBtn = "android:id/button1";
-	public String delConcelBtn = "android:id/button2";
+	public String delConfirmBtn = "com.zerozero.hover:id/hint_confirm";
+	public String delConcelBtn = "com.zerozero.hover:id/hint_cancel";
 	
 	public String shareFacebook_Id = "com.zerozero.hover:id/dialog_share_facebook";
 	public String shareInstagram_Id = "com.zerozero.hover:id/dialog_share_instagram";

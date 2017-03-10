@@ -59,10 +59,10 @@ public class ImageViewPage {
 	//默认设置拍照
 	public void takePhoto(AndroidDriver<WebElement> driver) throws Exception{
 		//make sure it is photo mode
-		changeToPhotoMode(driver);
+//		changeToPhotoMode(driver);
 		WebElement cameraShot = driver.findElement(By.id(cameraShut_Id));
 		cameraShot.click();
-//		Thread.sleep(8000);
+		Thread.sleep(1500);
 	}
 	
 	//五秒倒计时拍照

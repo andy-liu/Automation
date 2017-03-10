@@ -1,4 +1,17 @@
 -------------------------------------------------------------------------------
-Test set: com.zerozero.AndroidAppAutoTestCases.TestImageView
+Test set: com.zerozero.androidappautotestcases.TestImageView
 -------------------------------------------------------------------------------
-Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 219.412 sec
+Tests run: 9, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 187.822 sec <<< FAILURE! - in com.zerozero.androidappautotestcases.TestImageView
+testTakePhotoWithTimer(com.zerozero.androidappautotestcases.TestImageView)  Time elapsed: 45.505 sec  <<< ERROR!
+org.openqa.selenium.SessionNotCreatedException: 
+A new session could not be created. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'DESKTOP-EHSQD5N', ip: '192.168.187.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_112'
+Driver info: driver.version: AndroidDriver
+	at com.zerozero.androidappautotestcases.TestImageView.setUp(TestImageView.java:36)
+
+testTakePhotoWithTimer(com.zerozero.androidappautotestcases.TestImageView)  Time elapsed: 45.505 sec  <<< ERROR!
+java.lang.NullPointerException
+	at com.zerozero.androidappautotestcases.TestImageView.tearDown(TestImageView.java:251)
+
