@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+encoding//src/hover_pages/home_page.py=utf-8
+encoding//src/hover_pages/preview_page.py=utf-8
+encoding//src/test_cases/test_album_opration.py=utf-8
+encoding//src/test_cases/test_home_opration.py=utf-8
+encoding//src/test_cases/test_hover_install.py=utf-8
+encoding//src/test_cases/test_preview_opration.py=utf-8
+encoding//src/test_cases/test_suite.py=utf-8
+encoding//src/utils/common_function.py=utf-8
+encoding//src/utils/email_option.py=utf-8
+encoding//src/utils/image_option.py=utf-8

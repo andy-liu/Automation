@@ -14,6 +14,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
+import org.apache.bcel.generic.SWITCH;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVPrinter;
@@ -22,6 +23,30 @@ import org.junit.Test;
 
 
 public class TryFileIO {
+	
+	@Test
+	public void test(){
+		Integer a = 1000, b = 1000;
+		System.out.println(a == b);
+	}
+	
+	
+	@Test
+	public void testSwitch(){
+		int a = 2;
+		switch (a) {
+		case 1:
+			System.out.println("case1");
+		case 2:
+			System.out.println("case2");
+		case 3:
+			System.out.println("case3");
+		case 4:
+			System.out.println("case4");
+		default:
+			break;
+		}
+	}
 
 	@Test
 	public void readCSV() throws IOException {

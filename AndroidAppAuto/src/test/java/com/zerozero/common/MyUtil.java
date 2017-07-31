@@ -20,23 +20,23 @@ public final class MyUtil {
 		File classpathRoot = new File(System.getProperty("user.dir"));
         File appDir = new File(classpathRoot, "apps");
         File app = new File(appDir, "HoverCamera.apk");
-        capabilities.setCapability("deviceName","7b72de8b");
-        capabilities.setCapability("platformVersion", "5.1.1");
+        capabilities.setCapability("deviceName","a26632af");
+        capabilities.setCapability("platformVersion", "7.0");
         capabilities.setCapability("app", app.getAbsolutePath());
         capabilities.setCapability("appPackage", "com.zerozero.hover");
-//        capabilities.setCapability("autoAcceptAlerts", true);
-        capabilities.setCapability("appActivity", ".HomeActivity");
-//        capabilities.setCapability("appWaitActivity", "/.permission.ui.GrantPermissionsActivity");
-        capabilities.setCapability("appWaitActivity", ".TermsActivity");
+        capabilities.setCapability("appActivity", ".newui.splash.SplashActivity");
+      
+//        capabilities.setCapability("appWaitActivity", "com.zerozero.hover.TermsAndPolicyInfoActivity");
 	}
 	
 	public static void setCapabilityForNonFirstInstall(DesiredCapabilities capabilities){
-        capabilities.setCapability("deviceName","7b72de8b");
-        capabilities.setCapability("platformVersion", "5.1.1");
+        capabilities.setCapability("deviceName","a26632af");
+        capabilities.setCapability("platformVersion", "7.0");
         capabilities.setCapability("appPackage", "com.zerozero.hover");
-//        capabilities.setCapability("autoAcceptAlerts", true);
-        capabilities.setCapability("autoLaunch", false);
-        capabilities.setCapability("appActivity", ".HomeActivity");
+        capabilities.setCapability("noReset", true);
+        capabilities.setCapability("appActivity", ".newui.splash.SplashActivity");
+        capabilities.setCapability("appWaitActivity", ".newui.home.HomeActivity");
+//        capabilities.setCapability("appActivity", ".newui.splash.SplashActivity");
 	}
 	
 	public static boolean isElementExist(AndroidDriver<WebElement> driver, String id){

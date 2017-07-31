@@ -16,7 +16,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import com.zerozero.common.MyUtil;
 import com.zerozero.page.HomePage;
 import com.zerozero.page.SettingsPage;
-import com.zerozero.page.TutorialPage;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidKeyCode;
@@ -465,32 +464,6 @@ public class TestSettings {
 			// TODO: handle exception
 			e.printStackTrace();
 		}
-	}
-	
-	@Test
-	public void testJumpToTutorial(){
-		System.out.println("testCase: jump to tutorial page from settings page and swipe the tutorial page");
-		try {
-			HomePage homePage = new HomePage();
-			SettingsPage settingsPage = new SettingsPage();
-			TutorialPage tutorialPage = new TutorialPage();
-			homePage.navToSettingsPage(driver);
-			int width = driver.manage().window().getSize().width;
-	   	 	int height = driver.manage().window().getSize().height;
-			settingsPage.navToTutorialPage(driver);
-			boolean resultOfNavToTutorialPage = driver.currentActivity().equals(".TutorialActivity");
-	   	 	for(int i=0; i<5; i++){
-	   		 driver.swipe(width*6/7, height/2, width*1/7, height/2, 500);
-	   	 	}
-	   	 	driver.findElement(By.id(tutorialPage.enjoyBtn_id)).click();
-	   	 	boolean resultOfBackFromTutorialPage = driver.currentActivity().equals(".SettingsBaseActivity");
-	   	 	settingsPage.backToLastPage(driver);
-	   	 	assertTrue("Fail to nav to tutorial page", resultOfNavToTutorialPage);
-	   	 	assertTrue("Fail to back from tutorial page", resultOfBackFromTutorialPage);
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
-		}	
 	}
 	
 	@Test

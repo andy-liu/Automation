@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.After;
@@ -38,49 +39,17 @@ private AndroidDriver<WebElement> driver;
 	}
 	
 	@Test
-	public void testElementsOfHomePage() {
-		System.out.println("testCase: Check elements in Home Page");
-		HomePage homePage = new HomePage();
-		boolean imageViewBtn = MyUtil.isElementExist(driver, homePage.imageViewBtn_Id);
-		boolean albumBtn = MyUtil.isElementExist(driver, homePage.albumViewBtn_Id);
-		boolean wifiBtn = MyUtil.isElementExist(driver, homePage.wifiBtn_Id);
-		boolean tutorialBtn = MyUtil.isElementExist(driver, homePage.tutorialBtn_Id);
-		boolean settingsBtn = MyUtil.isElementExist(driver, homePage.settingsBtn_Id);
-		boolean instagramBtn = MyUtil.isElementExist(driver, homePage.instagramBtn_Id);
-		boolean result = imageViewBtn&&albumBtn&&wifiBtn&&tutorialBtn&&settingsBtn&&instagramBtn;
-		assertTrue("element is missing", result);
-	}
-	
-	@Test
-	public void testNavigationOfHomePage(){
-		System.out.println("testCase: Navigate to destination page from home page");
+	public void testLockedScenes() {
+		System.out.println("testCase: Check scenes of Locked");
 		try {
 			HomePage homePage = new HomePage();
-			homePage.navToImageViewPage(driver);
-
-			assertTrue("Fail to navgate to image view page!", driver.currentActivity().equals(".CameraActivity"));
-			driver.pressKeyCode(AndroidKeyCode.BACK);
-			
-			homePage.navToAlbumViewPage(driver);
-			assertTrue("Fail to navgate to image view page!", driver.currentActivity().equals(".AlbumActivity"));
-			driver.pressKeyCode(AndroidKeyCode.BACK);
-			
-			homePage.navToWifiPage(driver);
-			assertTrue("Fail to navgate to WifiSettings page of system!", driver.currentActivity().equals(".Settings$WifiSettingsActivity"));
-			driver.pressKeyCode(AndroidKeyCode.BACK);
-			
-			homePage.navToTutorialPage(driver);
-			assertTrue("Fail to navgate to Tutorial page!", driver.currentActivity().equals(".TutorialActivity"));
-			driver.pressKeyCode(AndroidKeyCode.BACK);
-			
-			homePage.navToSettingsPage(driver);
-			assertTrue("Fail to navgate to settings page!", driver.currentActivity().equals(".SettingsBaseActivity"));
-			driver.pressKeyCode(AndroidKeyCode.BACK);
+			homePage.checkScenesOfLocked(driver);
 		} catch (Exception e) {
-			// TODO: handle exception
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
+	
 	@After
 	public void teardown(){
 		driver.quit();

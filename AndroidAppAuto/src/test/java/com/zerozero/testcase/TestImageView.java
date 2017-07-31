@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.After;
@@ -17,6 +18,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.springframework.ui.context.Theme;
 
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidKeyCode;
 
 import com.zerozero.common.MyUtil;
 import com.zerozero.page.HomePage;
@@ -34,6 +36,7 @@ public class TestImageView {
 		
         try {
 			driver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS); 
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -41,82 +44,103 @@ public class TestImageView {
 	}
 
 	@Test
-	public void testTakePhoto() {
-		System.out.println("testCase: navigate to imageView, take photo and preview photo!");
-		try {
-			HomePage homePage = new HomePage();
-			MyUtil.connectToCameraWifiIfNot(driver);
-			//navigate to image view
-			homePage.navToImageViewPage(driver);
-			ImageViewPage imageViewPage = new ImageViewPage();
-			//take photo
-			imageViewPage.takePhoto(driver);
-			//preview photo and back
-			imageViewPage.previewPhotoAndBack(driver);
-			
+	public void testSwitchModeBetweenPhotoAndVideo() {
+		System.out.println("testCase: Switch Mode Between Photo And Video");
+		HomePage homePage = new HomePage();
+		List<WebElement> scenesList = driver.findElements(By.id(homePage.scenes_id));
+	   	for (int i=0; i<scenesList.size(); i++){
+	   			WebElement scene = scenesList.get(i);
+	   			String sceneName = scene.getText();
+	   			if(sceneName.equals("Manual Control")){
+	   				scene.click();
+	   				break;
+	   			}
+	   		}
+	   		driver.findElement(By.id(homePage.getStarted_id)).click();
+	   		try {
+	   			WebElement tutorial_GoBtn = driver.findElement(By.id("com.zerozero.hover:id/tutorial_start_btn"));
+	   			tutorial_GoBtn.click();
+	   		} catch (Exception e) {
+				// TODO: handle exception
+	   			e.printStackTrace();
+			}
+	   		
+	   		driver.findElement(By.id("com.zerozero.hover:id/caution_view_close")).click();
+	   		try {
+				Thread.sleep(3000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	   		for(int i=0; i<=10; i++){
+	   			driver.findElement(By.id("com.zerozero.hover:id/btn_camera_switch_video")).click();
+	   			try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+	   			System.out.println("第"+i+"次切换");
+	   		}
+	   		driver.pressKeyCode(AndroidKeyCode.BACK);		
+	}
+	
+	@Test
+	public void testTakePhotoInGroupPhoto(){
+		System.out.println("testCase: Take photos in group photo");
+		HomePage homePage = new HomePage();
+		homePage.swipeTab(driver);
+		List<WebElement> scenesList = driver.findElements(By.id(homePage.scenes_id));
+	   	for (int i=0; i<scenesList.size(); i++){
+	   			WebElement scene = scenesList.get(i);
+	   			String sceneName = scene.getText();
+	   			if(sceneName.equals("Group Photo")){
+	   				scene.click();
+	   				break;
+	   			}
+	   		}
+	   	driver.findElement(By.id(homePage.getStarted_id)).click();
+	   	try {
+	   		WebElement tutorial_GoBtn = driver.findElement(By.id("com.zerozero.hover:id/tutorial_start_btn"));
+	   		tutorial_GoBtn.click();
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
 		}
-
+	   	
+	   	driver.findElement(By.id("com.zerozero.hover:id/caution_view_close")).click();
+	   	driver.findElement(By.id("com.zerozero.hover:id/btn_camera_shutter")).click();
+	   	try {
+				Thread.sleep(3000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	   	driver.pressKeyCode(AndroidKeyCode.BACK);
+	   	try {
+				Thread.sleep(3000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	   	driver.pressKeyCode(AndroidKeyCode.BACK);
 	}
 	
 	@Test
 	public void testTakePhotoWithTimer(){
 		System.out.println("testCase: navigate to imageView, take photo with timer and preview photo!");
-		try {
-			HomePage homePage = new HomePage();
-			MyUtil.connectToCameraWifiIfNot(driver);
-			homePage.navToImageViewPage(driver);
-			ImageViewPage imageViewPage = new ImageViewPage();
-			imageViewPage.takePhotoWithTimer(driver);
-			assertTrue("capture timer is missing!", MyUtil.isElementExist(driver, imageViewPage.captureTimer_Id));
-			imageViewPage.previewPhotoAndBack(driver);
-			
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
-		}
+
 	}
 	
 	@Test
 	public void testTakePhotoWithFlash(){
 		System.out.println("testCase: navigate to imageView, take photo with flash and preview photo!");
-		try {
-			HomePage homePage = new HomePage();
-			MyUtil.connectToCameraWifiIfNot(driver);
-			homePage.navToImageViewPage(driver);
-			ImageViewPage imageViewPage = new ImageViewPage();
-			imageViewPage.takePhotoWithFlash(driver);
-			imageViewPage.previewPhotoAndBack(driver);
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
-		}
+		
 	}
 	
 	@Test
 	public void testChangeModeOfImgView(){
 		System.out.println("testCase: change mode between video and photo");
-		try {
-			HomePage homePage = new HomePage();
-			MyUtil.connectToCameraWifiIfNot(driver);
-			//navigate to image view
-			homePage.navToImageViewPage(driver);
-			ImageViewPage imageViewPage = new ImageViewPage();
-			imageViewPage.changeToVideoMode(driver);
-			boolean resultOfChangeToVideoMode = MyUtil.isElementExist(driver, imageViewPage.cameraTimer_Id);
-			
-			imageViewPage.changeToPhotoMode(driver);
-			boolean resultOfChangeToPhotoMode = MyUtil.isElementExist(driver, imageViewPage.cameraTimer_Id);
-			driver.navigate().back();
-			
-			assertFalse("Fail to change to video mode", resultOfChangeToVideoMode);
-			assertTrue("Fail to change to photo mode", resultOfChangeToPhotoMode);
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
-		}
 		
 	}
 	
@@ -124,111 +148,20 @@ public class TestImageView {
 	@Test
 	public void testFlyLandWithoutFly() {
 		System.out.println("testCase: Fly Land is not available when not flying");
-		try {
-			HomePage homePage = new HomePage();
-			MyUtil.connectToCameraWifiIfNot(driver);
-			//navigate to image view
-			homePage.navToImageViewPage(driver);
-			ImageViewPage imageViewPage = new ImageViewPage();
-			//photo mode
-			imageViewPage.changeToPhotoMode(driver);
-			imageViewPage.flyLand(driver);
-			String trueAlertTextPhontoMode = driver.findElement(By.id(imageViewPage.alertContent_Id)).getText();
-			driver.findElement(By.id(imageViewPage.alertOkBtn_Id)).click();
-			//video mode
-			imageViewPage.changeToVideoMode(driver);
-			imageViewPage.flyLand(driver);
-			String trueAlertTextVideoMode = driver.findElement(By.id(imageViewPage.alertContent_Id)).getText();
-			driver.findElement(By.id(imageViewPage.alertOkBtn_Id)).click();
-			driver.navigate().back();
-			
-			assertTrue("alert message in photo mode is not correct!", trueAlertTextPhontoMode.equals(imageViewPage.alertContentText));
-			assertTrue("alert message in video mode is not correct!", trueAlertTextVideoMode.equals(imageViewPage.alertContentText));
-			
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
-		}	
+		
 }
 	
 	@Test
 	public void testVideoShotWithoutFly(){
 		System.out.println("testCase: video shot is not available when not flying");
-		try {
-			HomePage homePage = new HomePage();
-			MyUtil.connectToCameraWifiIfNot(driver);
-			//navigate to image view
-			homePage.navToImageViewPage(driver);
-			ImageViewPage imageViewPage = new ImageViewPage();
-			imageViewPage.changeToVideoMode(driver);
-			imageViewPage.videoShot(driver);
-			String trueAlertTextVideoShot = driver.findElement(By.id(imageViewPage.alertContent_Id)).getText();
-			driver.findElement(By.id(imageViewPage.alertOkBtn_Id)).click();
-			driver.navigate().back();
-			assertTrue("alert message in video mode is not correct!", trueAlertTextVideoShot.equals(imageViewPage.alertContentText));
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
-		}
+		
 	}
 	
 	@Test
 	public void testTrackWithoutFly(){
 		System.out.println("testCase: track and yaw360 are not available when not flying");
-		try {
-			HomePage homePage = new HomePage();
-			MyUtil.connectToCameraWifiIfNot(driver);
-			//navigate to image view
-			homePage.navToImageViewPage(driver);
-			ImageViewPage imageViewPage = new ImageViewPage();
-			imageViewPage.changeToVideoMode(driver);
-			imageViewPage.extendFeatureBar(driver);
-			imageViewPage.trackFace(driver);
-			String trueAlertTextTrackFace = driver.findElement(By.id(imageViewPage.alertContent_Id)).getText();
-			driver.findElement(By.id(imageViewPage.alertOkBtn_Id)).click();
-			
-			imageViewPage.trackBody(driver);
-			String trueAlertTextTrackBody = driver.findElement(By.id(imageViewPage.alertContent_Id)).getText();
-			driver.findElement(By.id(imageViewPage.alertOkBtn_Id)).click();
-			
-			imageViewPage.orbit(driver);
-			String trueAlertTextOrbit = driver.findElement(By.id(imageViewPage.alertContent_Id)).getText();
-			driver.findElement(By.id(imageViewPage.alertOkBtn_Id)).click();
-			
-			imageViewPage.yaw360(driver);
-			String trueAlertTextYaw360 = driver.findElement(By.id(imageViewPage.alertContent_Id)).getText();
-			driver.findElement(By.id(imageViewPage.alertOkBtn_Id)).click();
-			
-			driver.navigate().back();
-			assertTrue("alert message of track face is not correct!", trueAlertTextTrackFace.equals(imageViewPage.alertContentText));
-			assertTrue("alert message of track body is not correct!", trueAlertTextTrackBody.equals(imageViewPage.alertContentText));
-			assertTrue("alert message of orbit is not correct!", trueAlertTextOrbit.equals(imageViewPage.alertContentText));
-			assertTrue("alert message of yaw360 is not correct!", trueAlertTextYaw360.equals(imageViewPage.alertContentText));
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
-		}
+		
 	}
-	
-//	@Test
-//	public void testStress(){
-//		try {
-//			HomePage homePage = new HomePage();
-//			MyUtil.connectToCameraWifiIfNot(driver);
-//			//navigate to image view
-//			homePage.navToImageViewPage(driver);
-//			ImageViewPage imageViewPage = new ImageViewPage();
-//			for (int i=0; i<6000; i++){
-//				WebElement cameraShot = driver.findElement(By.id(imageViewPage.cameraShut_Id));
-//				cameraShot.click();
-//				System.out.println("第"+ i+ "次拍照");
-//			}
-//		} catch (Exception e) {
-//			// TODO: handle exception
-//			e.printStackTrace();
-//		}
-//
-//	}
 	
 	@Test
 	public void testWait(){

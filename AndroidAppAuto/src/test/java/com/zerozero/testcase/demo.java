@@ -77,59 +77,18 @@ public class demo {
 	@Test
 	public void testTakePhoto() {
 		System.out.println("***********Take photo***************");
-		try {
-			HomePage homePage = new HomePage();
-//			MyUtil.connectToCameraWifiIfNot(driver);
-			homePage.navToImageViewPage(driver);
-			ImageViewPage imageViewPage = new ImageViewPage();
-			for (int i=0; i<5; i++){
-				imageViewPage.takePhoto(driver);
-			}
-			driver.pressKeyCode(AndroidKeyCode.BACK);
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
-		}
+
 	}
 
 	@Test
 	public void testOpenPhotoFromAlbum(){
 		System.out.println("***********Open photo from album***************");
-		try {
-			HomePage homePage = new HomePage();
-			AlbumPage albumPage = new AlbumPage();
-			homePage.navToAlbumViewPage(driver);
-			int imgCount = albumPage.openOneImg(driver);
-			int widht = driver.manage().window().getSize().width;
-	   	 	int height = driver.manage().window().getSize().height;
-			for(int i=0; i<imgCount; i++){
-		   	 	driver.swipe(widht*6/7, height/2, widht*2/7, height/2, 1000);
-			}
-			
-			for (int i=0; i<imgCount; i++){
-		   	 	driver.swipe(widht*2/7, height/2, widht*6/7, height/2, 1000);
-			}
-			albumPage.backFromBigImgView(driver);
-			driver.pressKeyCode(AndroidKeyCode.BACK);
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
-		}
+
 	}
 	
 	@Test
 	public void testDeletePhoto(){
 		System.out.println("***********Delete photo***************");
-		try {
-			HomePage homePage = new HomePage();
-			AlbumPage albumPage = new AlbumPage();
-			homePage.navToAlbumViewPage(driver);
-			albumPage.delAllImg(driver);
-			assertTrue("Fail to delete all images", driver.findElement(By.id(albumPage.textEmpty_Id)).getText().equals("No Photos"));
-			driver.pressKeyCode(AndroidKeyCode.BACK);
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
-		}
+
 	}
 }

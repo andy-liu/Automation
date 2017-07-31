@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+    {% block content %}
+        <p>继承了 base.html，但是修改了内容</p>
+        <p>{{ title }}</p>
+        <p>{{ description | upper }}</p>
+        <p>{{ content }}</p>
+        {% include 'public.html'%}
+    {% endblock %}

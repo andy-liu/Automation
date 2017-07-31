@@ -1,2 +1,5 @@
+AbstractTextEditor.Color.Background=0,0,0
+currentLineColor=59,59,59
 eclipse.preferences.version=1
 overviewRuler_migration=migrated_3.1
+pydevOccurrenceIndicationColor=255,128,0
