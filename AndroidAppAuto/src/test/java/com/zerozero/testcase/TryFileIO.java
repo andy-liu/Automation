@@ -1,5 +1,6 @@
 package com.zerozero.testcase;
 
+import java.awt.print.Printable;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -150,5 +151,21 @@ public class TryFileIO {
 		            csvWriter.write(rowStr);
 		        }
 		        csvWriter.newLine();
+		    }
+		    @Test
+		    public boolean testReturn(){
+		    	int a =1;
+		    	if(a==1){
+		    		try {
+						int b = 1/0;
+						return true;
+					} catch (Exception e) {
+						// TODO: handle exception
+						System.out.println("11111111111");
+						return false;
+					}
+		    	}
+		    	System.out.println("222222222222");
+		    	return false;
 		    }
 }

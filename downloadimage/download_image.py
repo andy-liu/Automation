@@ -13,11 +13,11 @@ def dowmload_image(html, path):
     for each in image_url:
         print('正在下载第'+str(i+1)+'张图片，图片地址:'+str(each))
         try:
-            image= requests.get(each, timeout=10)
+            image= requests.get(each, timeout=20)
         except requests.exceptions.ConnectionError:
             print('【错误】当前图片无法下载')
             continue
-        image_path = path + '/' + 'image' + '-' + str(i) + ".jpg"
+        image_path = path + r'/' + 'image' + '-' + str(i) + ".jpg"
         with open(image_path,'wb') as fp:
             # pic.content, You can also access the response body as bytes, for non-text requests
             fp.write(image.content)
@@ -25,7 +25,7 @@ def dowmload_image(html, path):
     print('下载完成')
 
 if __name__ == '__main__':
-    word = '青海湖'
+    word = '紫霞'
     url = 'http://image.baidu.com/search/flip?tn=baiduimage&ie=utf-8&word='+word+'&ct=201326592&v=flip'
     cur_dir = 'D:\spider_result'
     folder_name = 'image' + '_'+ ''.join(random.sample(string.ascii_letters + string.digits, 8))

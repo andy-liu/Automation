@@ -6,7 +6,6 @@ Created on 2017年4月22日
 '''
 from _ctypes import sizeof
 from builtins import sorted
-import learn02
 
 life = "人生苦短，我用python！"
 # print(life)

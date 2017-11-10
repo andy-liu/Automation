@@ -11,10 +11,10 @@ import random
 import HTMLTestRunner
 from utils.email_option import send_email_with_attach
 
-from test_cases.test_home_option import TestHomeOption
+from test_cases.test_home_opration import TestHomeOption
 from test_cases.test_hover_install import TestHoverInstall
-from test_cases.test_preview_option import TestPreviewOption
-from test_cases.test_album_option import TestAlbumOption
+from test_cases.test_preview_opration import TestPreviewOption
+from test_cases.test_album_opration import TestAlbumOption
 
 if __name__ == '__main__':
     ISOTIMEFORMAT = '%Y-%m-%d'

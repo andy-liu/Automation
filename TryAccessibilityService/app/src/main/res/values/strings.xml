@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">TryAccessibilityService</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="MyAccessibilityService">MyAccessibilityService</string>
+    <string name="my_accessibility_service_description">
+        测试demo
+    </string>
+
+    <string name="AutoReply">AutoReply</string>
+    <string name="auto_reply_description">
+        微信自动回复
+    </string>
+
+    <string name="AutoRobPacket">AutoRobPacket</string>
+    <string name="auto_rob_packet">
+        微信自动抢红包
+    </string>
+
+</resources>

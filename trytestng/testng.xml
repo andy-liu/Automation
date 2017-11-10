@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+<!--   <test name="Test">
+   <groups>
+        <run>
+                <include name="group2" />
+        </run>
+    </groups>
+    <classes>
+      <class name="com.liuguoping.trytestng.TestHelloWorld"/>
+      <class name="com.liuguoping.trytestng.TestAnnotations"/>
+      <class name="com.liuguoping.trytestng.TestGroups"/>
+    </classes>
+  </test>  -->
+  <test name="test" verbose="2">
+        <parameter name="name" value="Andy" />
+		<parameter name="city" value="ganzhou" />
+		<parameter name="name" value="Pinkman" />
+		<parameter name="city" value="beijing" />
+        <classes>
+            <class name="com.liuguoping.trytestng.TestParameterXML" />
+        </classes>
+  </test>
+  
+  
+</suite> <!-- Suite -->

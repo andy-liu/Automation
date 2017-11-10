@@ -70,6 +70,9 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.liuguoping.trytestng"/>
+			<item value="com.zerozero.test.uiautomator"/>
+			<item value="com.zerozero.uiautomator.test"/>
 			<item value="com.zerozero.webautomation"/>
 			<item value="com.zerozero.webauto"/>
 			<item value="com.zerozero.AndroidAppAuto"/>
@@ -77,15 +80,20 @@
 			<item value="com.lgp.test"/>
 		</list>
 		<list key="groupId">
+			<item value="com.liuguoping"/>
+			<item value="com.zerozero.test"/>
+			<item value="com.zerozero.uiautomator"/>
 			<item value="com.zerozero"/>
 			<item value="com.lgp"/>
 		</list>
 		<list key="artifactId">
+			<item value="trytestng"/>
+			<item value="uiautomator"/>
+			<item value="test"/>
 			<item value="webautomation"/>
 			<item value="webauto"/>
 			<item value="AndroidAppAuto"/>
 			<item value="demo_test"/>
-			<item value="test"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
