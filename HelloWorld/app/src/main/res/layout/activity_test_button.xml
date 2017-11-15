@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.liuguoping.helloworld.TestButtonActivity"
+    android:background="@drawable/bg_01">
+
+    <Button
+        android:id="@+id/button_1"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="我是Button_1"
+        android:textAllCaps="false"
+        android:layout_marginTop="10dp"
+        />
+
+    <Button
+        android:id="@+id/button_2"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="我是Button_2"
+        android:textAllCaps="false"
+        android:layout_below="@id/button_1"
+        android:background="#6ed433"
+        android:layout_marginTop="10dp"
+        android:onClick="showToast"
+        />
+    <Button
+        android:id="@+id/button_3"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="我是Button_3"
+        android:textAllCaps="false"
+        android:layout_below="@id/button_2"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_common_css"/>
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_01"
+    tools:context="com.liuguoping.helloworld.TestEditTextActivity">
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        android:hint="用户名"
+        android:textColor="#000000"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        />
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/username"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        android:textColor="#000000"
+        android:inputType="textPassword"
+        android:hint="密码"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        />
+    <Button
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/password"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="10dp"
+        android:text="登录"
+        android:textSize="20sp"
+        android:background="#f9b14990"/>
+</RelativeLayout>

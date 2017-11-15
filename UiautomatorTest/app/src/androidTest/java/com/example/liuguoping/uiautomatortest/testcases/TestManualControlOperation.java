@@ -6,7 +6,13 @@ import android.support.test.InstrumentationRegistry;
 import android.support.test.uiautomator.UiDevice;
 import android.util.Log;
 
+import com.example.liuguoping.uiautomatortest.myutils.MyUiWatcher;
+import com.example.liuguoping.uiautomatortest.pages.EndSessionPage;
+import com.example.liuguoping.uiautomatortest.pages.HomePage;
+import com.example.liuguoping.uiautomatortest.pages.PreviewPage;
+
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -40,6 +46,20 @@ public class TestManualControlOperation extends BaseCase {
 
     @Test
     public void testTakePhoto() throws Exception{
-        
+        MyUiWatcher myUiWatcher = new MyUiWatcher(mDevice);
+        mDevice.registerWatcher("testWatcher", myUiWatcher);
+        HomePage homePage = new HomePage(mDevice);
+        PreviewPage previewPage = new PreviewPage(mDevice);
+        EndSessionPage endSessionPage = new EndSessionPage(mDevice);
+        homePage.clickSceneByName("Manual Control");
+        homePage.clickGetStartBtn();
+        previewPage.clickTutorialGoBtn();
+        previewPage.clickCautionPageCloseBtn();
+        previewPage.clickShutterBtn();
+        previewPage.clickChangeModeBtn();
+        previewPage.clickPreviewCloseBtn();
+        Thread.sleep(3000);
+        Assert.assertTrue("Fail to download photo.", 1==endSessionPage.getResourceCount());
+        endSessionPage.clickSessionCloseBtn();
     }
 }

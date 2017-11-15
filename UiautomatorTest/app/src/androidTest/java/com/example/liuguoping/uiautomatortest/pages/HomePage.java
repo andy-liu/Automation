@@ -20,6 +20,7 @@ public class HomePage extends BasePage {
     public String customerServiceCloseBtnId = "com.zerozero.hover:id/back_rl";
     public String socialBtnId = "com.zerozero.hover:id/tv_month";
     public String socialCloseBtnId = "com.zerozero.hover:id/close";
+    public String getStartBtnId = "com.zerozero.hover:id/btn_start";
 
     public boolean clickAblumBtn(){
         findElementById(albumBtnId).clickAndWait(Until.newWindow(), 2000);
@@ -53,6 +54,16 @@ public class HomePage extends BasePage {
 
     public boolean clickSocialCloseBtn(){
         findElementById(socialCloseBtnId).clickAndWait(Until.newWindow(), 2000);
+        return true;
+    }
+
+    public boolean clickSceneByName(String sceneName){
+        findElementByText(sceneName).clickAndWait(Until.newWindow(), 2000);
+        return true;
+    }
+
+    public boolean clickGetStartBtn(){
+        findElementById(getStartBtnId).clickAndWait(Until.newWindow(), 2000);
         return true;
     }
 }
