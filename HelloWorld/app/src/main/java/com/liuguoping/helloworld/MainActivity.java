@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import com.liuguoping.helloworld.gridview.TestGridViewActivity;
 import com.liuguoping.helloworld.listview.TestListViewActivity;
+import com.liuguoping.helloworld.recycleview.RecycleViewActivity;
 
 public class MainActivity extends AppCompatActivity {
     private Button myBtn;
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private Button myBtn_6;
     private Button myBtn_7;
     private Button myBtn_8;
+    private Button myBtn_10;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         myBtn_6 = findViewById(R.id.button_6);
         myBtn_7 = findViewById(R.id.button_7);
         myBtn_8 = findViewById(R.id.button_8);
+        myBtn_10= findViewById(R.id.button_10);
         setListenerForButton();
     }
 
@@ -44,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         myBtn_6.setOnClickListener(operationOnClick);
         myBtn_7.setOnClickListener(operationOnClick);
         myBtn_8.setOnClickListener(operationOnClick);
+        myBtn_10.setOnClickListener(operationOnClick);
     }
 
     private class OperationOnClick implements View.OnClickListener {
@@ -81,6 +85,10 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.button_8:
                     myIntent = new Intent(MainActivity.this, TestGridViewActivity.class);
+                    startActivity(myIntent);
+                    break;
+                case R.id.button_10:
+                    myIntent = new Intent(MainActivity.this, RecycleViewActivity.class);
                     startActivity(myIntent);
                     break;
             }
