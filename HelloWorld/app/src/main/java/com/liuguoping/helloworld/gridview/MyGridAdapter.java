@@ -24,7 +24,7 @@ public class MyGridAdapter extends BaseAdapter {
     }
     @Override
     public int getCount() {
-        return 9;
+        return 30;
     }
 
     @Override
